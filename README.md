@@ -39,6 +39,13 @@ Run actually is a event finder site for people passionate about the art of runni
   * [Code](#Code)
   * [Acknowledgements](#Acknowledgements)
 
+  ****
+
+## User Experience Design
+### **The Strategy Plane**
+
+This website was created for for the sole purpose of compleating my MS3 for the "Code Institue's" full stack software developer program. At the same time I am a avid runnner so I thought it would be cool to create a runners event site that I my self would use to find, create and particapate in the events. The aim is to provide users with a website that allows them to quickly find or create Runners Events that can be shared with other runner enthusiasts. All historical events should be recorded, although they do not have to  be displayed as this data will not be needed until phase two enhancements of the website.
+
 
 
 
