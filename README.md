@@ -233,6 +233,33 @@ A custom 404 page will be created so that if a user attempts to nagiate to a pag
 error will be displayed. This page will contain a clickable anchor link to allow the user to redirect to 
 the main website without needing to use the browser navigation buttons.
 
+### **The Skeleton Plane**
+#### Wireframes
+
+Home:<br>
+![Home](readme_images/wireframes_png/home.png)<br>
+404:<br>
+![404](readme_images/wireframes_png/404.png)<br>
+Contact:<br>
+![Contact](readme_images/wireframes_png/contact.png)<br>
+About:<br>
+![About](readme_images/wireframes_png/about.png)<br>
+Create Event:<br>
+![Create Event](readme_images/wireframes_png/create-event.png)<br>
+Edit Event:<br>
+![Edit Event](readme_images/wireframes_png/edit-event.png)<br>
+Events:<br>
+![Events](readme_images/wireframes_png/events.png)<br>
+Profile<br>
+![Profile](readme_images/wireframes_png/profile.png)<br>
+Edit Profile<br>
+![Edit Profile](readme_images/wireframes_png/edit-profile.png)<br>
+Sign In:<br>
+![Log In](readme_images/wireframes_png/sign-in.png)<br>
+Sign Up<br>
+![Sign Up](readme_images/wireframes_png/sign-up.png)<br>
+
+
 
 
 
