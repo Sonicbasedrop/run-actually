@@ -254,7 +254,7 @@ Profile<br>
 ![Profile](readme_images/wireframes_png/profile.png)<br>
 Edit Profile<br>
 ![Edit Profile](readme_images/wireframes_png/edit-profile.png)<br>
-Sign In:<br>
+Log In:<br>
 ![Log In](readme_images/wireframes_png/sign-in.png)<br>
 Sign Up<br>
 ![Sign Up](readme_images/wireframes_png/sign-up.png)<br>
