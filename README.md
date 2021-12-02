@@ -234,7 +234,7 @@ error will be displayed. This page will contain a clickable anchor link to allow
 the main website without needing to use the browser navigation buttons.
 
 ### **The Skeleton Plane**
-#### Wireframes
+#### Wireframes PNG Format
 
 Home:<br>
 ![Home](readme_images/wireframes_png/home.png)<br>
@@ -258,6 +258,20 @@ Sign In:<br>
 ![Log In](readme_images/wireframes_png/sign-in.png)<br>
 Sign Up<br>
 ![Sign Up](readme_images/wireframes_png/sign-up.png)<br>
+
+#### Wireframes PDF Format
+
+* [Home](readme_images/wireframes_pdf/home.pdf)
+* [404](readme_images/wireframes_pdf/404.pdf)
+* [Contact](readme_images/wireframes_pdf/contact.pdf)
+* [About](readme_images/wireframes_pdf/about.pdf)
+* [Create Event](readme_images/wireframes_pdf/create-event.pdf)
+* [Edit Event](readme_images/wireframes_pdf/edit-event.pdf)
+* [Events](readme_images/wireframes_pdf/events.pdf)
+* [Profile](readme_images/wireframes_pdf/profile.pdf)
+* [Edit Profile](readme_images/wireframes_pdf/edit-profile.pdf)
+* [Log In](readme_images/wireframes_pdf/signin.pdf)
+* [Sign Up](readme_images/wireframes_pdf/signup.pdf)
 
 
 
