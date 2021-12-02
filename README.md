@@ -65,6 +65,25 @@ regards to the website answered.
 * As a user, I want to be able to return to the main site without having to use the browser buttons so 
 that I can easily return to the website if I navigate to a page that doesn't exist.
 
+### **The Scope Plane**
+
+**Features planned:**
+* Responsive design.
+* Website title and information on the site purpose.
+* Navigation Menu (Site Wide).
+* Footer with links (Site Wide).
+* MongoDB databases to store event information and user login/profile information.
+* CRUD Functionality.
+* Login functionality.
+* Logout functionality.
+* Profile Page.
+* Edit Profile Page.
+* Runners events displayed and searchable to all users.
+* Registered user event creation and management.
+* Admin ability to add, edit, delete categories.
+* Admin ability to delete user account.
+
+![Importance and Difficulty](readme_images/importance.png)
 
 
 
