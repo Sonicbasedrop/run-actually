@@ -1,4 +1,5 @@
-# RUN||actually
+![RUN||actually logo](readme_images/smallrunlogo.png) 
+# RUN||actually 
 
 Run actually is a event finder site for people passionate about the art of running fitness & health and in general. I't all about getting people outdoors and active. The live site will be found _**here**_.
 ### Mockup will be found _**here**_.
