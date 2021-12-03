@@ -275,6 +275,26 @@ Sign Up<br>
 * [Sign Up](readme_images/wireframes_pdf/signup.pdf)
 
 
+### **The Surface Plane**
+### Design
+
+#### Planned Colour Scheme
+The main background colour is a shade of the colour blue ![#008CFF](readme_images/runblue.png) 
+ 
+The main website text is black ![#000000](readme_images/runblack.png)
+#### Typography
+The tag line text on the home page used is 'Permanent Marker' and the font for all Page title used is 'Zilla Slab Highlight' the expanded materialize collapsible element headings use the font 'Nixie One' while the 
+rest of the websites content uses the 'Darker Grotesque' font.
+
+#### Imagery
+Different background images will be used on all pages displaying diffrent outdoors runners activaties
+taken from [Unsplash](https://unsplash.com/). 
+
+The website logo was created using online software from the website [Canva](https://www.canva.com/).
+
+
+
+
 
 
 
