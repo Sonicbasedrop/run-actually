@@ -4,6 +4,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+
 if os.path.exists("env.py"):
     import env
 
@@ -18,10 +19,12 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/get_tasks")
-def get_tasks():
-    tasks = mongo.db.tasks.find()
-    return render_template("tasks.html", tasks=tasks)
+@app.route("/home")
+def home():
+    """
+    Renders home page template when going to the main website link
+    """
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
