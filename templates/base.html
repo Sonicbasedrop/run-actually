@@ -23,11 +23,11 @@
 <body>
 
     <header>
-        <!-- top nav -->
+        <!-- top nav starts here -->
         <nav class ="nav-extended text-shadow light-blue darken-1">
             <div class="nav-wrapper">
                 <a href="{{ url_for('home') }}">
-                  <img src="{{ url_for('static', filename='#') }}" class="brand-logo" alt="Site Logo"></a>
+                  <img src="{{ url_for('static', filename='images/logo.png') }}" class="brand-logo" alt="Site Logo"></a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -43,7 +43,7 @@
           </nav>
           <!-- top nav ends here -->
 
-         <!-- mobile sidenav -->
+         <!-- mobile sidenav starts here -->
           <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align light-blue-text text-darken-4">RUN||actually</h4></li>
             <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -58,7 +58,7 @@
           <!-- mobile side nav ends here -->
       </header>
       <section>
-          <!-- flash messages -->
+          
           <!-- flash messages -->
          {% with messages = get_flashed_messages() %}
             {% if messages %}
@@ -81,6 +81,7 @@
       <footer class="page-footer center-align text-shadow light-blue darken-1">
         <div class="container">
           <div class="row">
+             <!-- socials links -->
             <div class="col s12 m6 l4">
               <h5 class="white-text">Follow Us</h5>
               <p class="grey-text text-lighten-4"><span>Let's Be Social</span></p>
@@ -92,6 +93,7 @@
               </div>
             </div>
             <div class="col s12 m6 l4">
+               <!-- about us info -->
               <h5 class="white-text">About Us</h5>
               <p class="grey-text text-lighten-4"><span>Get To Know Us</span></p>
               <ul>
@@ -99,6 +101,7 @@
                 </ul>
             </div>
             <div class="col s12 m6 l4">
+               <!-- contact info -->
               <h5 class="white-text">Contact Us</h5>
               <p class="grey-text text-lighten-4"><span>Ask Us Anything</span></p>
               <ul>
@@ -107,9 +110,10 @@
             </div>
           </div>
         </div>
+         <!-- copyright info -->
         <div class="footer-copyright center-align">
           <div class="container">
-          © 2021 Ivan Murraine Ulysses
+          <p class="copyright text-muted">Copyright &copy; Ivan Murraine Ulysses <span id="copyright"></span></p>
           </div>
         </div>
       </footer>
@@ -120,6 +124,9 @@
     {% block scripts %}
     {% endblock %} 
 
+    <script>
+      $("#copyright").text(new Date().getFullYear());
+  </script>   
    
 </body>
 </html>
