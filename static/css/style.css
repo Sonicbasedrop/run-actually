@@ -10,13 +10,19 @@
 
 /* navigation */
 
+
+  
 /* footer */
 
-.page-footer{
-    margin-top: 690px;
+.page-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     width: 100%;
+    
 }
 
 .page-footer p>span {
     color: rgb(248, 94, 94);
 }
+
