@@ -23,111 +23,110 @@
   {% endblock %}
   <title>Run||actually</title>
 </head>
+<header>
+  <!-- top nav starts here -->
+  <nav class="nav-extended text-shadow light-blue darken-1">
+    <div class="nav-wrapper">
+      <a href="{{ url_for('home') }}">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" class="brand-logo" alt="Site Logo"></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="#">Find Event</a></li>
+        <li><a href="#">Create Event</a></li>
+        <li><a href="#">Manage Categories</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+        <li><a href="#">Log In</a></li>
+        <li><a href="#">Log Out</a></li>
+      </ul>
+    </div>
 
-<body>
+    <body>
+  </nav>
+  <!-- top nav ends here -->
+  <!-- mobile sidenav starts here -->
+  <ul class="sidenav" id="mobile-demo">
+    <li>
+      <h4 class="center-align light-blue-text text-darken-4">RUN||actually</h4>
+    </li>
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="#">Find Event</a></li>
+    <li><a href="#">Create Event</a></li>
+    <li><a href="#">Manage Categories</a></li>
+    <li><a href="#">Profile</a></li>
+    <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+    <li><a href="#">Log In</a></li>
+    <li><a href="#">Log Out</a></li>
+  </ul>
+  <!-- mobile side nav ends here -->
+</header>
+<section>
+  <!-- flash messages -->
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  {% for message in messages %}
+  <div class="row flashes">
+    <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
+  </div>
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+</section>
+<main class="container">
+  {% block content %}
 
-  <header>
-    <!-- top nav starts here -->
-    <nav class="nav-extended text-shadow light-blue darken-1">
-      <div class="nav-wrapper">
-        <a href="{{ url_for('home') }}">
-          <img src="{{ url_for('static', filename='images/logo.png') }}" class="brand-logo" alt="Site Logo"></a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="{{ url_for('home') }}">Home</a></li>
-          <li><a href="#">Find Event</a></li>
-          <li><a href="#">Create Event</a></li>
-          <li><a href="#">Manage Categories</a></li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
-          <li><a href="#">Log In</a></li>
-          <li><a href="#">Log Out</a></li>
+  {% endblock %}
+</main>
+<!-- footer starts here -->
+<footer class="page-footer center-align text-shadow light-blue darken-1">
+  <div class="container">
+    <div class="row">
+      <!-- socials links -->
+      <div class="col s12 m6 l4">
+        <h5 class="white-text">Follow Us</h5>
+        <p class="grey-text text-lighten-4"><span>Let's Be Social</span></p>
+        <div class="column text-light">
+          <a href="http://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="http://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="http://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="http://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <!-- about us info -->
+        <h5 class="white-text">About Us</h5>
+        <p class="grey-text text-lighten-4"><span>Get To Know Us</span></p>
+        <ul>
+          <li><a class="waves-effect waves-light btn-small" href="#">About Us</a></li>
         </ul>
       </div>
-    </nav>
-    <!-- top nav ends here -->
-
-    <!-- mobile sidenav starts here -->
-    <ul class="sidenav" id="mobile-demo">
-      <li>
-        <h4 class="center-align light-blue-text text-darken-4">RUN||actually</h4>
-      </li>
-      <li><a href="{{ url_for('home') }}">Home</a></li>
-      <li><a href="#">Find Event</a></li>
-      <li><a href="#">Create Event</a></li>
-      <li><a href="#">Manage Categories</a></li>
-      <li><a href="#">Profile</a></li>
-      <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
-      <li><a href="#">Log In</a></li>
-      <li><a href="#">Log Out</a></li>
-    </ul>
-    <!-- mobile side nav ends here -->
-  </header>
-  <section>
-    <!-- flash messages -->
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    {% for message in messages %}
-    <div class="row flashes">
-      <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
+      <div class="col s12 m6 l4">
+        <!-- contact info -->
+        <h5 class="white-text">Contact Us</h5>
+        <p class="grey-text text-lighten-4"><span>Ask Us Anything</span></p>
+        <ul>
+          <li><a class="waves-effect waves-light btn-small">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    {% endfor %}
-    {% endif %}
-    {% endwith %}
-  </section>
-  <main class="container">
-    {% block content %}
-    {% endblock %}
-  </main>
-  <!-- footer starts here -->
-  <footer class="page-footer center-align text-shadow light-blue darken-1">
+  </div>
+  <!-- copyright info -->
+  <div class="footer-copyright center-align">
     <div class="container">
-      <div class="row">
-        <!-- socials links -->
-        <div class="col s12 m6 l4">
-          <h5 class="white-text">Follow Us</h5>
-          <p class="grey-text text-lighten-4"><span>Let's Be Social</span></p>
-          <div class="column text-light">
-            <a href="http://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="http://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="http://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="http://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-          </div>
-        </div>
-        <div class="col s12 m6 l4">
-          <!-- about us info -->
-          <h5 class="white-text">About Us</h5>
-          <p class="grey-text text-lighten-4"><span>Get To Know Us</span></p>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-          </ul>
-        </div>
-        <div class="col s12 m6 l4">
-          <!-- contact info -->
-          <h5 class="white-text">Contact Us</h5>
-          <p class="grey-text text-lighten-4"><span>Ask Us Anything</span></p>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-          </ul>
-        </div>
-      </div>
+      <p class="copyright text-muted">Copyright &copy; Ivan Murraine Ulysses <span id="copyright"></span></p>
     </div>
-    <!-- copyright info -->
-    <div class="footer-copyright center-align">
-      <div class="container">
-        <p class="copyright text-muted">Copyright &copy; Ivan Murraine Ulysses <span id="copyright"></span></p>
-      </div>
-    </div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-  {% block scripts %}
-  {% endblock %}
-  <script>
-    $("#copyright").text(new Date().getFullYear());
-  </script>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% block scripts %}
+{% endblock %}
+<script>
+  $("#copyright").text(new Date().getFullYear());
+</script>
 
 </body>
 
