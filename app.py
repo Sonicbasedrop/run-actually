@@ -103,6 +103,13 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/")
+@app.route("/get_events")
+def get_events():
+    events = mongo.db.events.find()
+    return render_template("events.html", events=events)    
+
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
