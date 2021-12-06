@@ -107,7 +107,13 @@ def logout():
 @app.route("/get_events")
 def get_events():
     events = list(mongo.db.events.find())
-    return render_template("events.html", events=events)    
+    return render_template("events.html", events=events)
+
+
+@app.route("/create_event")
+def create_event():
+    return render_template("create_event.html")
+
 
 
 

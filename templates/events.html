@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block content %}. 
+{% block content %}
 
   <ul class="collapsible">
     {% for event in events %}
@@ -8,7 +8,7 @@
              <i class="fas fa-caret-down"></i>
              <strong>{{ event.event_name }}</strong> : {{ event.date }}
              {% if event.is_urgent == "on" %}
-             <i class="fas fa-exclamation-circle light-blue-text text-lighten-2 tooltipped"
+             <i class="fas fa-exclamation-circle light-blue-text text-darken-4 tooltipped"
                         data-position="right" data-tooltip="URGENT!"></i>
                 {% endif %}
              </div>
