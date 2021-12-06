@@ -64,21 +64,21 @@ def login():
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(
-                        request.form.get("username")))
-                    return redirect(url_for(
-                        "profile", username=session["user"]))
-            else:
-                # invalid password match
-                flash("Incorrect Username and/or Password")
-                return redirect(url_for("login"))
-
+                     existing_user["password"], request.form.get("password")):
+                         session["user"] = request.form.get("username").lower()
+                         flash("Welcome, {}".format(
+                            request.form.get("username")))
+                         return redirect(url_for(
+                            "profile", username=session["user"]))
         else:
-            # username doesn't exist
+            # invalid password match
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
+
+    else:
+            # username doesn't exist
+        flash("Incorrect Username and/or Password")
+        return redirect(url_for("login"))
 
     return render_template("login.html")
 
@@ -89,7 +89,7 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
-    if session["user"]:    
+    if session["user"]:   
         return render_template("profile.html", username=username)
 
     return redirect(url_for("login"))
@@ -113,8 +113,6 @@ def get_events():
 @app.route("/create_event")
 def create_event():
     return render_template("create_event.html")
-
-
 
 
 if __name__ == "__main__":
