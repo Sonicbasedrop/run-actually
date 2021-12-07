@@ -112,7 +112,8 @@ def get_events():
 
 @app.route("/create_event")
 def create_event():
-    return render_template("create_event.html")
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("create_event.html", categories=categories)
 
 
 if __name__ == "__main__":
