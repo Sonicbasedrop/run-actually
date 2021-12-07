@@ -70,15 +70,15 @@ def login():
                             request.form.get("username")))
                         return redirect(url_for(
                             "profile", username=session["user"]))
+            else:
+                # invalid password match
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("login"))
+
         else:
-            # invalid password match
+            # username doesn't exist
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
-
-    else:
-            # username doesn't exist
-        flash("Incorrect Username and/or Password")
-        return redirect(url_for("login"))
 
     return render_template("login.html")
 
@@ -102,7 +102,6 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
-
 @app.route("/")
 @app.route("/get_events")
 def get_events():
@@ -110,8 +109,23 @@ def get_events():
     return render_template("events.html", events=events)
 
 
-@app.route("/create_event")
+@app.route("/create_event", methods=["GET", "POST"])
 def create_event():
+    if request.method == "POST":
+        is_urgent = "on" if request.form.get("is_urgent") else "off"
+        event = {
+             "category_name": request.form.get("category_name"),
+             "date": request.form.get("date"),
+             "event_description": request.form.get("event_description"),
+             "event_name": request.form.get("event_name"),
+             "is_urgent": is_urgent,
+             "location": request.form.get("location"),
+             "created_by": session["user"]
+        }
+        mongo.db.events.insert_one(event)
+        flash("Event Successfully Created")
+        return redirect(url_for("get_events"))
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("create_event.html", categories=categories)
 
