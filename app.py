@@ -51,6 +51,7 @@ def signup():
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
         return redirect(url_for("profile", username=session["user"]))
+
     return render_template("signup.html")
 
 
@@ -64,12 +65,12 @@ def login():
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                    existing_user["password"], request.form.get("password")):
-                        session["user"] = request.form.get("username").lower()
-                        flash("Welcome, {}".format(
-                            request.form.get("username")))
-                        return redirect(url_for(
-                            "profile", username=session["user"]))
+                 existing_user["password"], request.form.get("password")):
+                    session["user"] = request.form.get("username").lower()
+                    flash("Welcome, {}".format(
+                        request.form.get("username")))
+                    return redirect(url_for(
+                        "profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -89,7 +90,7 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
-    if session["user"]: 
+    if session["user"]:
         return render_template("profile.html", username=username)
 
     return redirect(url_for("login"))
@@ -101,6 +102,7 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
 
 @app.route("/")
 @app.route("/get_events")
@@ -132,9 +134,24 @@ def create_event():
 
 @app.route("/edit_event/<event_id>", methods=["GET", "POST"])
 def edit_event(event_id):
+    if request.method == "POST":
+        is_urgent = "on" if request.form.get("is_urgent") else "off"
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "date": request.form.get("date"),
+            "event_description": request.form.get("event_description"),
+            "event_name": request.form.get("event_name"),
+            "is_urgent": is_urgent,
+            "location": request.form.get("location"),
+            "created_by": session["user"]
+        }
+        mongo.db.events.update({"_id": ObjectId(event_id)}, submit)
+        flash("Event Successfully Updated")
+
     event = mongo.db.events.find_one({"_id": ObjectId(event_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_event.html", event=event, categories=categories)
+    return render_template(
+        "edit_event.html", event=event, categories=categories)
 
 
 if __name__ == "__main__":
