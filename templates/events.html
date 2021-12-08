@@ -10,7 +10,7 @@
       <div class="col s3">
         <i class="fas fa-caret-down"></i>
         <a href="" class="waves-effect waves-light btn-small green accent-4">Done</a>
-        <a href="" class=" waves-effect waves-light btn-small light-blue lighten-1">Edit</a>
+        <a href="{{ url_for('edit_event', event_id=event._id)}}" class=" waves-effect waves-light btn-small light-blue lighten-1">Edit</a>
       </div>
          <div class="col s9">
            <strong>{{ event.event_name }}</strong> : {{ event.date }}
