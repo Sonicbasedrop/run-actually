@@ -166,7 +166,20 @@ def delete_event(event_id):
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template("categories.html", categories=categories)       
+    return render_template("categories.html", categories=categories)
+
+
+@app.route("/create_category", methods=["GET", "POST"])
+def create_category():
+    if request.method == "POST":
+        category = {
+            "category_name": request.form.get("category_name")
+        }
+        mongo.db.categories.insert_one(category)
+        flash("New Category Created")
+        return redirect(url_for("get_categories"))
+
+    return render_template("create_category.html")
 
 
 if __name__ == "__main__":
