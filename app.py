@@ -160,7 +160,13 @@ def edit_event(event_id):
 def delete_event(event_id):
     mongo.db.events.delete_one({"_id": ObjectId(event_id)})
     flash("Event Successfully Deleted")
-    return redirect(url_for("get_events"))   
+    return redirect(url_for("get_events"))
+
+
+@app.route("/get_categories")
+def get_categories():
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template("categories.html", categories=categories)       
 
 
 if __name__ == "__main__":
