@@ -22,16 +22,18 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home")
 def home():
-    """
-    Renders home page template when going to the main website link
-    """
+   # Renders home page template when going to the main website link
+
     return render_template("index.html")
 
 
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
+
+    # Sign up page, allows users to signup for an account
+    # if username dosen't already exist.
+
     if request.method == "POST":
-        # check if username already exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -46,7 +48,6 @@ def signup():
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(signup)
-
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
@@ -57,27 +58,27 @@ def signup():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    # Checks users collection for user and password to allow registered
+    # users to sign in. Redirects to profile on successful sign in.
     if request.method == "POST":
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
                  existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(
+                  session["user"] = request.form.get("username").lower()
+                  flash("Welcome, {}".format(
                         request.form.get("username")))
-                    return redirect(url_for(
+                  return redirect(url_for(
                         "profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
-
         else:
-            # username doesn't exist
+           # username doesn't exist
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
@@ -98,7 +99,7 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
-    # remove user from session cookie
+    # remove user from session cookie and returns them to the signin page
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
@@ -145,13 +146,21 @@ def edit_event(event_id):
             "location": request.form.get("location"),
             "created_by": session["user"]
         }
-        mongo.db.events.update({"_id": ObjectId(event_id)}, submit)
+        mongo.db.events.update_one(
+            {"_id": ObjectId(event_id)}, {"$set": submit})
         flash("Event Successfully Updated")
 
     event = mongo.db.events.find_one({"_id": ObjectId(event_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
         "edit_event.html", event=event, categories=categories)
+
+
+@app.route("/delete_event/<event_id>")
+def delete_event(event_id):
+    mongo.db.events.delete_one({"_id": ObjectId(event_id)})
+    flash("Event Successfully Deleted")
+    return redirect(url_for("get_events"))   
 
 
 if __name__ == "__main__":
