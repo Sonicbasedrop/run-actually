@@ -22,7 +22,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home")
 def home():
-   # Renders home page template when going to the main website link
+    # renders home page template when going to the main website link
 
     return render_template("index.html")
 
@@ -30,7 +30,7 @@ def home():
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
 
-    # Sign up page, allows users to signup for an account
+    # sign up page, allows users to signup for an account
     # if username dosen't already exist.
 
     if request.method == "POST":
@@ -58,7 +58,7 @@ def signup():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
-    # Checks users collection for user and password to allow registered
+    # checks users collection for user and password to allow registered
     # users to sign in. Redirects to profile on successful sign in.
     if request.method == "POST":
         # check if username exists in db
@@ -87,7 +87,8 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # grab the session user's username from db
+    # takes the session user's username from 'users' database
+    # and returns them to their profile page.
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
@@ -107,12 +108,17 @@ def logout():
 
 @app.route("/get_events")
 def get_events():
+    # reads all events in events collection 
+    # displays events on events.html.
     events = list(mongo.db.events.find())
     return render_template("events.html", events=events)
 
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    # returns search results from user input query or drop down
+    # selection from events page and saves them to events list.
+    # renders template for events.html.
     query = request.form.get("query")
     events = list(mongo.db.events.find({"$text": {"$search": query}}))
     return render_template("events.html", events=events)
@@ -120,6 +126,8 @@ def search():
 
 @app.route("/create_event", methods=["GET", "POST"])
 def create_event():
+    # gets values from create event form and stores values
+    # into MongoDB collection events. renders create_event.html.
     if request.method == "POST":
         is_urgent = "on" if request.form.get("is_urgent") else "off"
         event = {
@@ -141,6 +149,8 @@ def create_event():
 
 @app.route("/edit_event/<event_id>", methods=["GET", "POST"])
 def edit_event(event_id):
+    # allows user to edit an event. If successful, flash message is displayed
+    # to alert user. after edit, user is redirected to events page
     if request.method == "POST":
         is_urgent = "on" if request.form.get("is_urgent") else "off"
         submit = {
@@ -164,6 +174,8 @@ def edit_event(event_id):
 
 @app.route("/delete_event/<event_id>")
 def delete_event(event_id):
+     # allows user to delete an event if they created it.
+     # returns user back to events page.
     mongo.db.events.delete_one({"_id": ObjectId(event_id)})
     flash("Event Successfully Deleted")
     return redirect(url_for("get_events"))
@@ -177,6 +189,8 @@ def get_categories():
 
 @app.route("/create_category", methods=["GET", "POST"])
 def create_category():
+    # allows the site owner/admin create a category. if successful, flash message is displayed
+    # to alert site owner/admin. after edit, site owner/admin is redirected to manage categories page
     if request.method == "POST":
         category = {
             "category_name": request.form.get("category_name")
@@ -190,6 +204,8 @@ def create_category():
 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+    # allows the site owner/admin to edit any category. if successful, flash message is displayed
+    # to alert site owner/admin. after edit, site owner/admin is redirected to manage categories page
     if request.method == "POST":
         submit = {
             "category_name": request.form.get("category_name")
@@ -204,9 +220,17 @@ def edit_category(category_id):
 
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
+    # allows site owner/admin to delete any category.
+     # returns site owner/admin back to manage category page.
     mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted")
-    return redirect(url_for("get_categories"))    
+    return redirect(url_for("get_categories"))
+
+
+@app.route("/contact")
+def contact():
+    # renders contact template
+    return render_template("contact.html")
 
 
 if __name__ == "__main__":
