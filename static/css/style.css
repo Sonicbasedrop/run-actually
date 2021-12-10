@@ -17,14 +17,9 @@
     line-height: 42px;
 }
 
-/* navigation */
-
-  
-/* footer */
 
 .page-footer {
-    position: fixed;
-    height: 155px;
+    min-height: 100px;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -34,4 +29,3 @@
 .page-footer p>span {
     color: rgb(248, 94, 94);
 }
-

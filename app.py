@@ -105,10 +105,16 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/")
 @app.route("/get_events")
 def get_events():
     events = list(mongo.db.events.find())
+    return render_template("events.html", events=events)
+
+
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    events = list(mongo.db.events.find({"$text": {"$search": query}}))
     return render_template("events.html", events=events)
 
 
