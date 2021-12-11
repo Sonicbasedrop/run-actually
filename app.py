@@ -162,6 +162,7 @@ def edit_event(event_id):
             "location": request.form.get("location"),
             "created_by": session["user"]
         }
+        # update unique event
         mongo.db.events.update_one(
             {"_id": ObjectId(event_id)}, {"$set": submit})
         flash("Event Successfully Updated")
@@ -221,7 +222,7 @@ def edit_category(category_id):
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     # allows site owner/admin to delete any category.
-     # returns site owner/admin back to manage category page.
+    # returns site owner/admin back to manage category page.
     mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted")
     return redirect(url_for("get_categories"))
@@ -231,6 +232,18 @@ def delete_category(category_id):
 def contact():
     # renders contact template
     return render_template("contact.html")
+
+
+@app.errorhandler(404)
+def not_found_error(error):
+    # Route to handle 404 error
+    return render_template('404.html', error=error), 404
+
+
+@app.errorhandler(500)
+def internal_error(error):
+    # Route to handle 500 error
+    return render_template('500.html', error=error), 500    
 
 
 if __name__ == "__main__":
