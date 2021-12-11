@@ -234,6 +234,12 @@ def contact():
     return render_template("contact.html")
 
 
+@app.route("/about")
+def about():
+    # renders about page
+    return render_template("about.html")  
+
+
 @app.errorhandler(404)
 def not_found_error(error):
     # Route to handle 404 error
