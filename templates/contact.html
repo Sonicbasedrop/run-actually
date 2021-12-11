@@ -30,18 +30,18 @@
               <div class="row">
                   <div class="input-field col s12 m8 offset-m2">
                       <i class="fas fa-comment prefix text-darken-4"></i>
-                      <label for="comments" class="form-label">Comments</label>
+                      <label for="comments" class="form-label">Comment</label>
                       <textarea id="comments" name="comments" pattern="^[a-zA-Z0-9 @.-_*#]{5,25}$"
                        class="materialize-textarea validate" required></textarea>
                   </div>
               </div>
               <!-- email reponse -->
-              <div class="emailaddress-response center-align green-text">
+              <div class="response center-align green-text">
               </div>
               <!-- submit comment button-->
               <div class="row center-align">
                   <button type="submit" class="col s12 m8 offset-m2 btn-small darken-4">
-                      Submit Comment <i class="far fa-arrow-alt-circle-right"></i>
+                      Submit Comment
                   </button>
               </div>
           </div>
@@ -52,15 +52,17 @@
   {% endblock %} 
 
   {% block scripts %}
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script type="text/javascript">
-  (function() {
-    emailjs.init("user_SdOadbneJmuMuoN2jGKic");
-    emailjs.send("service_mygcksp","contact_form");
-   })();
+  <!-- EmailJS script for sending email via thr contact form-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript">
+(function() {
+  emailjs.init("user_SdOadbneJmuMuoN2jGKic");
+  emailjs.send("gmail","contact_form");
+})();
 </script>
 
-  <script src="static/js/email.js"></script>
+  <script src="static/js/sendEmail.js"></script>
 {% endblock %}
+    
         
   
