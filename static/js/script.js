@@ -7,6 +7,8 @@ $(document).ready(function(){
     $(".tooltipped").tooltip();
     // select options
     $('select').formSelect();
+    // modal initialiser
+    $('.modal').modal();
      // date picker 
     $(".datepicker").datepicker({
         format: "dd mmmm, yyyy",
