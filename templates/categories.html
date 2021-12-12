@@ -18,11 +18,26 @@
                     <div class="card-content white-text">
                         <span class="card-title">{{ category.category_name }}</span>
                     </div>
+                    <!-- edit / delete (calls modal) buttons -->
                     <div class="card-action">
                         <a href="{{ url_for('edit_category', category_id=category._id) }}" class="btn green accent-4">Edit</a>
-                        <a href="{{ url_for('delete_category', category_id=category._id) }}" class="btn light-blue lighten-1">Delete</a>
+                        <a href="#delete-modal-{{category._id}}" class="btn light-blue modal-trigger lighten-1">Delete</a>
                     </div>
                 </div>
+                 <!-- modal structure -->
+         <div id="delete-modal-{{category._id}}" class="modal">
+            <div class="modal-content">
+                <h4 id="warning">WARNING! <i class="fas fa-exclamation-triangle"></i></h4>
+                <p>Are you sure you want to delete the {{ category.category_name }} Category?</p>
+            </div>
+            <div class="modal-footer">
+                <a href="{{ url_for('delete_category', category_id=category._id) }}"
+                    class="modal-close waves-effect waves-green btn-flat">Delete</a>
+                <a href="{{ url_for('get_categories', username=session['user']) }}"
+                    class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+            </div>
+        </div>
+
             </div>
         {% endfor %}
     </div>
