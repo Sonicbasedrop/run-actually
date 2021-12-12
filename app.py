@@ -108,7 +108,7 @@ def logout():
 
 @app.route("/get_events")
 def get_events():
-    # reads all events in events collection 
+    # reads all events in events collection
     # displays events on events.html.
     events = list(mongo.db.events.find())
     return render_template("events.html", events=events)
@@ -136,8 +136,8 @@ def create_event():
              "event_description": request.form.get("event_description"),
              "event_name": request.form.get("event_name"),
              "is_urgent": is_urgent,
-             "location": request.form.get("location"),
-             "created_by": session["user"]
+             "location": request.form.get("location").capitalize(),
+             "created_by": session["user"].capitalize()
         }
         mongo.db.events.insert_one(event)
         flash("Event Successfully Created")
@@ -159,7 +159,7 @@ def edit_event(event_id):
             "event_description": request.form.get("event_description"),
             "event_name": request.form.get("event_name"),
             "is_urgent": is_urgent,
-            "location": request.form.get("location"),
+            "location": request.form.get("location").capitalize(),
             "created_by": session["user"]
         }
         # update unique event
@@ -175,8 +175,8 @@ def edit_event(event_id):
 
 @app.route("/delete_event/<event_id>")
 def delete_event(event_id):
-     # allows user to delete an event if they created it.
-     # returns user back to events page.
+    # allows user to delete an event if they created it.
+    # returns user back to events page.
     mongo.db.events.delete_one({"_id": ObjectId(event_id)})
     flash("Event Successfully Deleted")
     return redirect(url_for("get_events"))
@@ -184,14 +184,18 @@ def delete_event(event_id):
 
 @app.route("/get_categories")
 def get_categories():
+    # reads all categories in categories collection 
+    # displays categories on categories.html to site owner/admin
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
 
 
 @app.route("/create_category", methods=["GET", "POST"])
 def create_category():
-    # allows the site owner/admin create a category. if successful, flash message is displayed
-    # to alert site owner/admin. after edit, site owner/admin is redirected to manage categories page
+    #  allows the site owner/admin create a category. if successful,
+    #  flash message is displayed
+    #  to alert site owner/admin. after edit, site owner/admin is redirected
+    #  to manage categories page
     if request.method == "POST":
         category = {
             "category_name": request.form.get("category_name")
@@ -205,8 +209,10 @@ def create_category():
 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
-    # allows the site owner/admin to edit any category. if successful, flash message is displayed
-    # to alert site owner/admin. after edit, site owner/admin is redirected to manage categories page
+    # allows the site owner/admin to edit any category. if successful, 
+    # flash message is displayed
+    # to alert site owner/admin. after edit, site owner/admin is redirected 
+    # to manage categories page
     if request.method == "POST":
         submit = {
             "category_name": request.form.get("category_name")
@@ -237,7 +243,7 @@ def contact():
 @app.route("/about")
 def about():
     # renders about page
-    return render_template("about.html")  
+    return render_template("about.html")
 
 
 @app.errorhandler(404)
@@ -249,7 +255,7 @@ def not_found_error(error):
 @app.errorhandler(500)
 def internal_error(error):
     # Route to handle 500 error
-    return render_template('500.html', error=error), 500    
+    return render_template('500.html', error=error), 500 
 
 
 if __name__ == "__main__":
