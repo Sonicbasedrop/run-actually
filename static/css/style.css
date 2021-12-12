@@ -21,6 +21,10 @@ body {
     line-height: 42px;
 }
 
+#warning {
+  color: red;
+}
+
 /* contact form */
 .response {
     font-size: 1rem;
