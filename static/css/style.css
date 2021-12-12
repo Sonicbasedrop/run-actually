@@ -21,7 +21,7 @@ body {
     line-height: 42px;
 }
 
-/* Contact Page */
+/* contact form */
 .response {
     font-size: 1rem;
     font-weight: bolder;
@@ -29,6 +29,7 @@ body {
 }
 
 
+/* footer */
 .page-footer {
     min-height: 100px;
     left: 0;
@@ -42,7 +43,7 @@ body {
 }
 
 
-  /* 404 page */
+  /* 404 error page */
 
   .mainbox {
     background-color: #fff;
