@@ -39,10 +39,10 @@
                 <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
                  {% endif %}
             <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+            <li><a href="{{ url_for('logout') }}" class="waves-effect waves-light btn-small">Log Out</a></li>
         {% else %}
-            <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
-            <li><a href="{{ url_for('login') }}">Log In</a></li>
+            <li><a href="{{ url_for('signup') }}" class="waves-effect waves-light btn-small">Sign Up</a></li>
+            <li><a href="{{ url_for('login') }}" class="waves-effect waves-light btn-small">Log In</a></li>
         {% endif %}
         
       </ul>
