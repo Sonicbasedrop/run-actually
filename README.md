@@ -114,13 +114,13 @@ space. When clicked, the menu will expand out from the right side of the screen 
 The following navigation items will be implemented in the main menu when user is not logged in:
 
 * Home - index.html
-* Find Event - find-event.html
+* Events - get_events.html
 * Sign Up - register.html
 * Log In - login.html
 
 The following navigation items will be implemented in the main menu when user is logged in:
 * Home - index.html
-* Find Events - get_events.html
+* Events - get_events.html
 * Create Event - create-event.html
 * Profile - profile.html
 * Log Out - (redirects to home page)
@@ -153,7 +153,7 @@ User Story:
 Acceptance Criteria:
 * Sign up - Login and Logout functionality to be added.
 * User must have the ability to create, update and delete their own events.
-* User must have a profile page displaying their basic details and events they have created.
+* User must have a profile page displaying their basic details.
 * Creator of an event should have the ability to update or delete the events.
 
 Implementation:
@@ -186,7 +186,7 @@ User Story:
 
 Acceptance Criteria:
 * Events must be displayed to all users regardless of being logged in.
-* Users should be able to search for events by Date, Location or Event Type.
+* Users should be able to search for events by Date, Location or Event Category.
 
 Implementation:
 
