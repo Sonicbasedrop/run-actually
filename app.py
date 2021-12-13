@@ -34,8 +34,8 @@ def signup():
     sign up page, allows users to signup for an account
     if username dosen't already exist.
     """
-
     if request.method == "POST":
+        # check if username already exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -50,9 +50,9 @@ def signup():
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(signup)
-        # put the new user into 'session'cookie    
+        # put the new user into'session'cookie  
         session["user"] = request.form.get("username").lower()
-        flash("Registration Successful!")
+        flash("Signup Successful!")
         return redirect(url_for("profile", username=session["user"]))
 
     return render_template("signup.html")
@@ -62,29 +62,31 @@ def signup():
 def login():
     """
     checks users collection for user and password to allow registered
-    users to sign in. Redirects to profile on successful sign in.
+    users to login. Redirects to profile on successful login.
     """
     if request.method == "POST":
-        # check if username exists in db     
+        # check if username already exists in db     
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
+
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
-                session["user"] = request.form.get("username").lower()
-                flash("Welcome, {}".format(
-                    request.form.get("username")))
-                return redirect(url_for(
-                   "profile", username=session["user"]))
+                        session["user"] = request.form.get("username").lower()
+                        flash("Welcome, {}".format(
+                            request.form.get("username")))
+                        return redirect(url_for(
+                            "profile", username=session["user"]))        
             else: 
                 # invalid password match      
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
-    else:
-        # username doesn't exist   
-        flash("Incorrect Username and/or Password")
-        return redirect(url_for("login"))
+
+        else:
+            # username doesn't exist
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("login"))
 
     return render_template("login.html")
 

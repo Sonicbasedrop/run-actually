@@ -1,19 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Nixie+One&family=Permanent+Marker&family=Zilla+Slab+Highlight&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.nav-wrapper{
+  height: 100%;
+}
+
 html, body {
   height: 100%;
 }
 
 
 body {
-  display: flex;
-  flex-direction: column;
   background-image: url("../images/fil-mazzarino-VyOtjKmSnKQ-unsplash.jpg");
   background-color: #fff;
 }
 
-.content {
-  flex: 1 0 auto;
+a {
+  text-decoration: none;
+  color: #555;
 }
 
 .text-shadow {
@@ -26,13 +35,14 @@ body {
 
 .btn-small {
     margin: 5px;
+    color: #fff;
 }
 
 .collapsible-header .col strong {
     margin: 5px;
     line-height: 42px;
 }
-
+/* modal */
 #warning {
   color: red;
 }
@@ -106,7 +116,7 @@ body {
       width: 75%;
     }
   
-  a {
+  #err-home {
     text-decoration: none;
     color: green;
   }
