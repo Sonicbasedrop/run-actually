@@ -274,6 +274,37 @@ Sign Up<br>
 * [Log In](readme_images/wireframes_pdf/signin.pdf)
 * [Sign Up](readme_images/wireframes_pdf/signup.pdf)
 
+#### Database Design
+MongoDB Object format examples:
+
+**Collection: categories**<br>
+{<br>
+_id: unique-value,<br>
+category_name: "Mud Runs"<br>
+}
+
+**Collection: events**<br>
+{<br>
+_id: unique-value,<br>
+category_name: "5k Runs"<br>
+date: "30 December, 2021"<br>
+event_description: "Just a nice 5k run for the k-9's"<br>
+event_name :"Muddle in puddle"<br>
+is_urgent: "on"<br>
+location: "Helsingborg, Sweden"<br>
+created_by: "Admin<br>
+}
+
+**Collection: users**<br>
+{<br>
+_id: unique-value,<br>
+name: "ivanmurraineulysses"<br>
+username: "admin"<br>
+eamil: "murraine8@gmail.com"<br>
+password:*****************<br>
+}
+
+
 
 ### **The Surface Plane**
 ### Design
