@@ -1,9 +1,118 @@
-{% extends "base.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
 
-
-<h4 class="text-darken-4 center-align" id="page-title">Home</h4>
-
-
-  {% endblock %}  
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- import font awesome CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
+  <!-- compiled and minified CSS for Materialize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    type="text/css">
+  <!-- import custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+  <!-- import favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='iamges/favicon/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="url_for('static', filename='images/favicon/favicon-16x16.png') }}">
+  <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}">
+  {% block styless %}
+  {% endblock %}
+  <title>Run||actually</title>
+</head>
+<body>
   
+<!-- The video -->
+<video autoplay muted loop id="myVideo" class="responsive-video">
+  <source src="static/video/run.mp4" type="video/mp4">
+</video>
+
+<!-- Optional: some overlay text to describe the video -->
+<div class="mp4-overlay">
+  <h3>Welcome to RUN||actually</h3>
+  <h5>Here you can find, create, and signup to participate in inspiring,
+     memorable and brilliantly sweaty experiences.
+  </h5>
+  <!-- Use a button to pause/play the video with JavaScript -->
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+<!-- top nav starts here -->
+<nav class="nav-extended text-shadow light-blue darken-1">
+  <div class="nav-wrapper">
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="{{ url_for('home') }}" class="waves-effect waves-light btn-small">Home</a></li>
+      <li><a href="{{ url_for('get_events') }}" class="waves-effect waves-light btn-small">Events</a></li>
+      {% if session.user %}
+          <li><a href="{{ url_for('create_event') }}" class="waves-effect waves-light btn-small">Create Event</a></li>
+             {% if session.user|lower == "admin"|lower %}
+              <li><a href="{{ url_for('get_categories') }}" class="waves-effect waves-light btn-small">Manage Categories</a></li>
+               {% endif %}
+          <li><a href="{{ url_for('profile', username=session['user']) }}" class="waves-effect waves-light btn-small">Profile</a></li>
+          <li><a href="{{ url_for('logout') }}" class="waves-effect waves-light btn-small">Log Out</a></li>
+      {% else %}
+          <li><a href="{{ url_for('signup') }}" class="waves-effect waves-light btn-small">Sign Up</a></li>
+          <li><a href="{{ url_for('login') }}" class="waves-effect waves-light btn-small">Log In</a></li>
+      {% endif %}
+      
+    </ul>
+  </div>
+
+  <body>
+    <div class="content">
+      
+    </div>
+</nav>
+<!-- top nav ends here -->
+<!-- mobile sidenav starts here -->
+<ul class="sidenav" id="mobile-demo">
+  <li>
+    <h4 class="center-align light-blue-text text-darken-4">RUN||actually</h4>
+  </li>
+  <li><a href="{{ url_for('home') }}">Home</a></li>
+  <li><a href="{{ url_for('get_events') }}">Events</a></li>
+  {% if session.user %}
+      <li><a href="{{ url_for('create_event') }}">Create Event</a></li>
+      <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+      <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+      <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+  {% else %}
+     <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+     <li><a href="{{ url_for('login') }}">Log In</a></li>
+  {% endif %}
+  
+</ul>
+<!-- mobile side nav ends here -->
+<!-- load jQuery and Materialize JS files -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!-- import custom JS -->
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+<!-- jQuery get current year function -->
+<script>
+  // Get the video
+  var video = document.getElementById("myVideo");
+  
+  // Get the button
+  var btn = document.getElementById("myBtn");
+
+  // Pause and play the video, and change the button text
+  function myFunction() {
+    if (video.paused) {
+      video.play();
+      btn.innerHTML = "Pause";
+    } else {
+      video.pause();
+      btn.innerHTML = "Play";
+    }
+  }
+  </script>
+  {% block scripts %}
+  {% endblock %}
+ </body>
+</html>
