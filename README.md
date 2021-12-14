@@ -303,8 +303,11 @@ username: "admin"<br>
 eamil: "murraine8@gmail.com"<br>
 password:*****************<br>
 }
+#### Security
 
-
+Database connection details are set up in an [env.py](https://pypi.org/project/env.py/) for development, for 
+security reasons this is not uploaded to GitHub so that database and connection details are not visible to 
+users. In production these are stored in Heroku. 
 
 ### **The Surface Plane**
 ### Design
