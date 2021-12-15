@@ -47,7 +47,6 @@
         
       </ul>
     </div>
-
     <body>
       <div class="content">
         <img src="static/images/mud-run.jpg" alt="Two men jumping over a coal fire during a Mud run even">
@@ -74,7 +73,7 @@
   </ul>
   <!-- mobile side nav ends here -->
 </header>
-<section>
+<main class="container">
   <!-- flash messages -->
   {% with messages = get_flashed_messages() %}
   {% if messages %}
@@ -85,16 +84,12 @@
   {% endfor %}
   {% endif %}
   {% endwith %}
-</section>
-<!--
-<main class="container">
-  
-  
+
   {% block content %}
  
   {% endblock %}
 </main>
--->
+
 <!-- footer starts here -->
 <footer class="page-footer center-align text-shadow light-blue darken-1">
   <div class="container">
