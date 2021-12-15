@@ -17,13 +17,16 @@
 
 
 body {
+  /*
   background-image: url("../images/fil-mazzarino-VyOtjKmSnKQ-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  */
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
+
 
 main,
 .container{
@@ -135,8 +138,7 @@ a {
     text-decoration: underline;
   }
 
-/*  fullscreen video background home page*/
-
+/*  fullscreen video background home page */
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
   position: fixed;
@@ -160,8 +162,8 @@ a {
 #myBtn {
   width: 100px;
   text-transform: uppercase;
-  font-size: 15px;
-  padding: 10px;
+  font-size: 13px;
+  padding: 9px;
   border: none;
   background: rgb(0, 0, 0);
   color: #fff;
