@@ -74,7 +74,8 @@
   </ul>
   <!-- mobile side nav ends here -->
 </header>
-<section>
+
+  <main class="container">
   <!-- flash messages -->
   {% with messages = get_flashed_messages() %}
   {% if messages %}
@@ -85,8 +86,7 @@
   {% endfor %}
   {% endif %}
   {% endwith %}
-</section>
-<main class="container">
+
   {% block content %}
 
   {% endblock %}
