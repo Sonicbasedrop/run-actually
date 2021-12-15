@@ -5,16 +5,20 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_wtf.csrf import CSRFProtect, CSRFError
 
 if os.path.exists("env.py"):
     import env
 
 
 app = Flask(__name__)
+csrf = CSRFProtect(app)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
+app.config['SECRET_KEY'] = ("SECRET_KEY")
+
 
 mongo = PyMongo(app)
 
@@ -98,7 +102,7 @@ def profile(username):
     and returns them to their profile page.
     """
     username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+        {"username": session["user"]})["username"].capitalize()
 
     if session["user"]:
         return render_template("profile.html", username=username)
@@ -283,7 +287,7 @@ def about():
 @app.errorhandler(404)
 def not_found_error(error):
     """
-    route to handle 404 error
+    route to handle page not found 404 error
     """
     return render_template('404.html', error=error), 404
 
@@ -291,9 +295,17 @@ def not_found_error(error):
 @app.errorhandler(500)
 def internal_error(error):
     """
-    route to handle 500 error
+    route to handle internal server 500 error
     """
     return render_template('500.html', error=error), 500
+
+
+@app.errorhandler(CSRFError)
+def handle_csrf_error(e):
+    """
+    route to handle bad request 400 error
+    """
+    return render_template({"400.html": e.description}), 400    
 
 
 if __name__ == "__main__":
