@@ -17,41 +17,48 @@
   <!-- import custom CSS -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
   <!-- import favicon-->
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='iamges/favicon/favicon-32x32.png') }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="url_for('static', filename='images/favicon/favicon-16x16.png') }}">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="{{ url_for('static', filename='iamges/favicon/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="url_for('static', filename='images/favicon/favicon-16x16.png') }}">
   <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}">
   {% block styless %}
   {% endblock %}
   <title>Run||actually</title>
 </head>
-<body> 
+
+<body>
   <div class="mainbox">
     <div class="err">4</div>
     <i class="far fa-question-circle fa-spin"></i>
     <div class="err2">4</div>
-    <div class="msg">Maybe this page moved? Got deleted? Is hiding out in quarantine? Or never existed in the first place?<p>Let's go <a href="{{ url_for('home') }}" id="err-home">home</a> and try from there.</p></div>
-      </div>
-  <!-- footer starts here -->
-<footer class="page-footer center-align text-shadow light-blue darken-1">
-  <!-- copyright info -->
-  <div class="footer-copyright center-align">
-    <div class="container">
-      <p class="copyright text-muted">Copyright &copy; Ivan Murraine Ulysses <span id="copyright"></span></p>
+    <div class="msg">Maybe this page moved? Got deleted? Is hiding out in quarantine? Or never existed in the first
+      place?<p>Let's go <a href="{{ url_for('home') }}" id="err-home">home</a> and try from there.</p>
     </div>
   </div>
-</footer>
-<!-- load jQuery and Materialize JS files -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<!-- import custom JS -->
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
-{% block scripts %}
-{% endblock %}
-<!-- jQuery get current year function -->
-<script>
-  $("#copyright").text(new Date().getFullYear());
-</script>
- </body>
+  <!-- footer starts here -->
+  <footer class="page-footer center-align text-shadow light-blue darken-1">
+    <!-- copyright info -->
+    <div class="footer-copyright center-align">
+      <div class="container">
+        <p class="copyright text-muted">Copyright &copy; Ivan Murraine Ulysses <span id="copyright"></span></p>
+      </div>
+    </div>
+  </footer>
+  <!-- load jQuery and Materialize JS files -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- import custom JS -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  {% block scripts %}
+  {% endblock %}
+  <!-- jQuery get current year function -->
+  <script>
+    $("#copyright").text(new Date().getFullYear());
+  </script>
+</body>
+
 </html>
