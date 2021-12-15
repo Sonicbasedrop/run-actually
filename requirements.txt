@@ -1,7 +1,13 @@
+
 click==8.0.3
+csrf==0.1b1
 dnspython==2.1.0
 Flask==2.0.2
 Flask-PyMongo==2.3.0
+Flask-WTF==1.0.0
 itsdangerous==2.0.1
 pymongo==4.0
+simplejson==3.17.6
 Werkzeug==2.0.2
+WTForms==3.0.0
+
