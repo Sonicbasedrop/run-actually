@@ -1,19 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
    
-<h4 class="center-align" id="page-title">Profile</h4>
 
-      <div class="container">
-       <div class="row">
-         <div class="col s12 m8 offset-m2">
-           <div class="card-panel teal darken-2">
-             <h3 class="center-align text-darken-4">
-               {{ username }}'s Profile
-             </h3>
-              </div> 
-          </div>
-      </div>
-    </div>
+<h4 class="center-align" id="page-title">Profile</h4>
+<div class="card">
+  <div class="card-header">
+    <img src="https://i.imgur.com/r7vRdaj.jpg" alt="Run actually logo in  user profile page card">
+  </div>
+  <div class="card-content">
+    <h3> Hi {{ username }}</h3>
+    <h4>Welcome to RUN||actually </h4>
+    <p>We hope to be the inspiration to help you get out your front door and achieve something brilliant.
+       We have a lot of great to events choose from - so there's a finish line for everyone to aim for
+        - whether you're a complete beginner or looking for an extreme test of physical and mental toughness,
+       then visit www.run-actually.herokuapp.com/ 'Search and Enjoy!' </p>
+  </div>
+  <div class="card-footer">
+    <ul>
+      <li>
+        <a href="{{ url_for('edit_profile') }}">
+          <i class="fas fa-user-edit prefix text-darken-4"></i></a>
+      </li>
+      <li>
+        <a href="{{ url_for('home') }}">
+          <i class="fas fa-home prefix text-darken-4"></i></a>
+      </li>
+      <li>
+        <a href="{{ url_for('get_events') }}">
+          <i class="fas fa-running prefix text-darken-4"></i></a>
+          
+      </li>
+    </ul>
+  </div>
+</div>
  
 {% endblock %}
-            
+
