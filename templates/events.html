@@ -2,7 +2,7 @@
 {% block content %}
 
 <h4 class="center-align" id="page-title">Events</h4>
-
+<div class="container">
 <div class="row card-panel teal darken-4">
   <form action="{{ url_for('search') }}" method="post" class="col s12">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
@@ -23,7 +23,7 @@
 </div>
 
 {% if events|length > 0 %}
-<ul class="collapsible">
+<ul class="collapsible teal darken-2">
   {% for event in events %}
   <li>
     <div class="collapsible-header teal darken-2">
@@ -66,6 +66,7 @@
   {% endfor %}
 </ul>
 {% else %}
+</div>
     <h4 class="red-text text-darken-4 center-align">No Results Found</h4>
 {% endif %}
 
