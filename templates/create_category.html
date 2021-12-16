@@ -2,7 +2,7 @@
 {% block content %}
 
 <h4 class="center-align text-darken-4" id="page-title">Create Category</h4>
-
+<div class="container">
 <div class="row card-panel teal darken-4">
   <form class="col s12" method="POST" action="{{ url_for('create_category') }}">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
@@ -29,6 +29,7 @@
       </div>
     </div>
   </form>
+</div>
 </div>
 
 
