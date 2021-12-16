@@ -23,7 +23,7 @@
   {% endblock %}
   <title>Run||actually</title>
 </head>
-<header>
+<body>
   <!-- top nav starts here -->
   <nav class="nav-extended text-shadow light-blue darken-1">
     <div class="nav-wrapper">
@@ -47,10 +47,9 @@
         
       </ul>
     </div>
-    <body>
-      <div class="content">
+    <div class="content">
         <img src="static/images/mud-run.jpg" alt="Two men jumping over a coal fire during a Mud run even">
-      </div>
+    </div>
   </nav>
   <!-- top nav ends here -->
   <!-- mobile sidenav starts here -->
@@ -69,10 +68,8 @@
        <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
        <li><a href="{{ url_for('login') }}">Log In</a></li>
     {% endif %}
-    
   </ul>
   <!-- mobile side nav ends here -->
-</header>
 <main class="container">
   <!-- flash messages -->
   {% with messages = get_flashed_messages() %}
@@ -89,7 +86,6 @@
  
   {% endblock %}
 </main>
-
 <!-- footer starts here -->
 <footer class="page-footer center-align text-shadow light-blue darken-1">
   <div class="container">
@@ -143,3 +139,7 @@
 <script>
   $("#copyright").text(new Date().getFullYear());
 </script>
+{% block scripts %}
+  {% endblock %}
+</body>
+</html>
