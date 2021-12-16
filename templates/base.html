@@ -23,7 +23,7 @@
   {% endblock %}
   <title>Run||actually</title>
 </head>
-<header>
+<body>
   <!-- top nav starts here -->
   <nav class="nav-extended text-shadow light-blue darken-1">
     <div class="nav-wrapper">
@@ -44,14 +44,8 @@
             <li><a href="{{ url_for('signup') }}" class="waves-effect waves-light btn-small">Sign Up</a></li>
             <li><a href="{{ url_for('login') }}" class="waves-effect waves-light btn-small">Log In</a></li>
         {% endif %}
-        
       </ul>
     </div>
-
-    <body>
-      <div class="content">
-        
-      </div>
   </nav>
   <!-- top nav ends here -->
   <!-- mobile sidenav starts here -->
@@ -70,11 +64,8 @@
        <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
        <li><a href="{{ url_for('login') }}">Log In</a></li>
     {% endif %}
-    
   </ul>
   <!-- mobile side nav ends here -->
-</header>
-
   <main class="container">
   <!-- flash messages -->
   {% with messages = get_flashed_messages() %}
