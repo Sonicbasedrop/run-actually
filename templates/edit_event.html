@@ -2,7 +2,7 @@
 {% block content %}
 
 <h4 class="center-align" id="page-title">Edit Event</h4>
-
+<div class="container">
 <div class="row card-panel teal darken-4">
   <form class="col s12" method="POST" action="{{ url_for('edit_event', event_id=event._id) }}">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
@@ -95,6 +95,7 @@
       </div>
     </div>
   </form>
+</div>
 </div>
 
 {% endblock %}
