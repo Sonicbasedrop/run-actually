@@ -15,34 +15,41 @@
   <!-- import custom CSS -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
   <!-- import favicon-->
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='iamges/favicon/favicon-32x32.png') }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="url_for('static', filename='images/favicon/favicon-16x16.png') }}">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="{{ url_for('static', filename='iamges/favicon/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="{{ url_for('static', filename='images/favicon/favicon-16x16.png') }}">
   <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}">
   {% block styless %}
   {% endblock %}
-  <title>Run||actually</title>
+<title>Run||actually</title>
 </head>
+
 <body>
   <!-- top nav starts here -->
   <nav class="nav-extended text-shadow">
     <div class="nav-wrapper">
       <a href="{{ url_for('home') }}">
-        <img src="{{ url_for('static', filename='images/greenroundlogo.png') }}" class="brand-logo responsive" alt="Site Logo"></a>
+        <img src="{{ url_for('static', filename='images/greenroundlogo.png') }}" class="brand-logo responsive"
+          alt="Site Logo"></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="{{ url_for('home') }}" class="waves-effect waves-light btn-small">Home</a></li>
         <li><a href="{{ url_for('get_events') }}" class="waves-effect waves-light btn-small">Events</a></li>
         {% if session.user %}
-            <li><a href="{{ url_for('create_event') }}" class="waves-effect waves-light btn-small">Create Event</a></li>
-               {% if session.user|lower == "admin"|lower %}
-                <li><a href="{{ url_for('get_categories') }}" class="waves-effect waves-light btn-small">Manage Categories</a></li>
-                 {% endif %}
-            <li><a href="{{ url_for('profile', username=session['user']) }}" class="waves-effect waves-light btn-small">Profile</a></li>
-            <li><a href="{{ url_for('logout') }}" class="waves-effect waves-light btn-small">Log Out</a></li>
+        <li><a href="{{ url_for('create_event') }}" class="waves-effect waves-light btn-small">Create Event</a></li>
+        {% if session.user|lower == "admin"|lower %}
+        <li><a href="{{ url_for('get_categories') }}" class="waves-effect waves-light btn-small">Manage Categories</a>
+        </li>
+        {% endif %}
+        <li><a href="{{ url_for('profile', username=session['user']) }}"
+            class="waves-effect waves-light btn-small">Profile</a></li>
+        <li><a href="{{ url_for('logout') }}" class="waves-effect waves-light btn-small">Log Out</a></li>
         {% else %}
-            <li><a href="{{ url_for('signup') }}" class="waves-effect waves-light btn-small">Sign Up</a></li>
-            <li><a href="{{ url_for('login') }}" class="waves-effect waves-light btn-small">Log In</a></li>
+        <li><a href="{{ url_for('signup') }}" class="waves-effect waves-light btn-small">Sign Up</a></li>
+        <li><a href="{{ url_for('login') }}" class="waves-effect waves-light btn-small">Log In</a></li>
         {% endif %}
       </ul>
     </div>
@@ -56,86 +63,87 @@
     <li><a href="{{ url_for('home') }}">Home</a></li>
     <li><a href="{{ url_for('get_events') }}">Events</a></li>
     {% if session.user %}
-        <li><a href="{{ url_for('create_event') }}">Create Event</a></li>
-        <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
-        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+    <li><a href="{{ url_for('create_event') }}">Create Event</a></li>
+    <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
     {% else %}
-       <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
-       <li><a href="{{ url_for('login') }}">Log In</a></li>
+    <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+    <li><a href="{{ url_for('login') }}">Log In</a></li>
     {% endif %}
   </ul>
   <!-- mobile side nav ends here -->
   <main class="container">
-  <!-- flash messages -->
-  {% with messages = get_flashed_messages() %}
-  {% if messages %}
-  {% for message in messages %}
-  <div class="row flashes">
-    <h4 class="center-align">{{ message }}</h4>
-  </div>
-  {% endfor %}
-  {% endif %}
-  {% endwith %}
+    <!-- flash messages -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="row flashes">
+      <h4 class="center-align">{{ message }}</h4>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
 
-  {% block content %}
+    {% block content %}
 
-  {% endblock %}
-</main>
-<!-- footer starts here -->
-<footer class="page-footer center-align text-shadow">
-  <div class="container">
-    <div class="row">
-      <!-- socials links -->
-      <div class="col s12 m6 l4">
-        <h5 class="white-text">Follow Us</h5>
-        <p class="grey-text text-lighten-4"><span>Let's Be Social</span></p>
-        <div class="column text-light">
-          <span>
-          <a href="http://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="http://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="http://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="http://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-        </span>
+    {% endblock %}
+  </main>
+  <!-- footer starts here -->
+  <footer class="page-footer center-align text-shadow">
+    <div class="container">
+      <div class="row">
+        <!-- socials links -->
+        <div class="col s12 m6 l4">
+          <h5 class="white-text">Follow Us</h5>
+          <p class="grey-text text-lighten-4"><span>Let's Be Social</span></p>
+          <div class="column text-light">
+            <span>
+              <a href="http://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="http://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="http://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="http://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </span>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <!-- about us info -->
+          <h5 class="white-text">About Us</h5>
+          <p class="grey-text text-lighten-4"><span>Get To Know Us</span></p>
+          <ul>
+            <li><a href="{{ url_for('about') }}" class="waves-effect waves-light btn-small">About</a></li>
+          </ul>
+        </div>
+        <div class="col s12 m6 l4">
+          <!-- contact info -->
+          <h5 class="white-text">Contact Us</h5>
+          <p class="grey-text text-lighten-4"><span>Ask Us Anything</span></p>
+          <ul>
+            <li><a href="{{ url_for('contact') }}" class="waves-effect waves-light btn-small">Contact</a></li>
+          </ul>
         </div>
       </div>
-      <div class="col s12 m6 l4">
-        <!-- about us info -->
-        <h5 class="white-text">About Us</h5>
-        <p class="grey-text text-lighten-4"><span>Get To Know Us</span></p>
-        <ul>
-          <li><a href="{{ url_for('about') }}" class="waves-effect waves-light btn-small">About</a></li>
-        </ul>
-      </div>
-      <div class="col s12 m6 l4">
-        <!-- contact info -->
-        <h5 class="white-text">Contact Us</h5>
-        <p class="grey-text text-lighten-4"><span>Ask Us Anything</span></p>
-        <ul>
-          <li><a href="{{ url_for('contact') }}" class="waves-effect waves-light btn-small">Contact</a></li>
-        </ul>
+    </div>
+    <!-- copyright info -->
+    <div class="footer-copyright center-align">
+      <div class="container">
+        <p class="copyright text-muted">Copyright &copy;Ivan Murraine Ulysses <span id="copyright"></span></p>
       </div>
     </div>
-  </div>
-  <!-- copyright info -->
-  <div class="footer-copyright center-align">
-    <div class="container">
-      <p class="copyright text-muted">Copyright &copy;Ivan Murraine Ulysses <span id="copyright"></span></p>
-    </div>
-  </div>
-</footer>
-<!-- load jQuery and Materialize JS files -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<!-- import custom JS -->
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </footer>
+  <!-- load jQuery and Materialize JS files -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- import custom JS -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
-<!-- jQuery get current year function -->
-<script>
-  $("#copyright").text(new Date().getFullYear());
-</script>
+  <!-- jQuery get current year function -->
+  <script>
+    $("#copyright").text(new Date().getFullYear());
+  </script>
   {% block scripts %}
   {% endblock %}
- </body>
+</body>
+
 </html>
