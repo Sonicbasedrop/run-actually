@@ -26,9 +26,9 @@
 <body>
   <!-- top nav starts here -->
   <nav class="nav-extended text-shadow">
-    <div class="nav-wrapper blue-grey darken-2">
+    <div class="nav-wrapper">
       <a href="{{ url_for('home') }}">
-        <img src="{{ url_for('static', filename='images/greenroundlogo.png') }}" class="brand-logo responsive-img" alt="Site Logo"></a>
+        <img src="{{ url_for('static', filename='images/greenroundlogo.png') }}" class="brand-logo responsive" alt="Site Logo"></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="{{ url_for('home') }}" class="waves-effect waves-light btn-small">Home</a></li>
@@ -83,8 +83,8 @@
   {% endblock %}
 </main>
 <!-- footer starts here -->
-<footer class="page-footer center-align text-shadow blue-grey darken-2">
-  <div class="container ">
+<footer class="page-footer center-align text-shadow">
+  <div class="container">
     <div class="row">
       <!-- socials links -->
       <div class="col s12 m6 l4">
