@@ -17,7 +17,9 @@ nav.nav-extended .nav-wrapper {
 
 .brand-logo {
   margin-left: 15px;
-  margin-top: 2px;
+  margin-top: 12px;
+  max-height: 80%;
+  max-width: 80%;
 }
 
 #page-title {
@@ -27,7 +29,7 @@ nav.nav-extended .nav-wrapper {
 
 body {
   
-  background-image: url("../images/jane-palash-yimb1ePGs00-unsplash.jpg");
+  background-image: url("../images/alessio-soggetti-GYr9A2CPMhY-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -37,14 +39,19 @@ body {
 
 
 .card-panel {
+  
   background-color: rgba(0, 0, 0, 0.5); 
 }
 
 .collapsible {
+  
   background-color: rgba(95, 93, 93, 0.5); 
 }
 
 .collapsible-header {
+  /*
+  background-color: #bdbdbd;
+  */
   background-color: rgba(97, 96, 96, 0.5); 
 }
 
@@ -72,6 +79,7 @@ a {
     color: #fff;
 }
 
+
 .collapsible-header .col strong {
     margin: 5px;
     line-height: 42px;
@@ -93,7 +101,6 @@ a {
 .page-footer {
   min-height: 100px;
   background-color: rgba(0, 0, 0, 0.5); 
-  
   left: 0;
   bottom: 0;
   width: 100%;
@@ -207,7 +214,8 @@ footer .column i  {
 /*  Profile page card  */
 
 .card {
-  background-color: #f4f4f4;
+  background-color: rgba(0, 0, 0, 0.5);
+  
   width: 330px;
   margin: 20px auto;
   box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7);
@@ -227,6 +235,7 @@ footer .column i  {
 .card-content {
   width: 85%;
   margin: 10px auto;
+  
 }
 
 .card-content h3 {
@@ -239,12 +248,12 @@ footer .column i  {
 .card-content h4 {
   font-size: 14px;
   margin-top: 0;
-  color: #FF5252;
+  color: #fc1616;
   font-family: 'Montserrat', sans-serif;
 }
 
 .card-content p {
-  color: #777;
+  color: #fff;
   font-size: 13px;
   font-family: 'Open Sans', sans-serif;
   
@@ -270,5 +279,19 @@ footer .column i  {
 
 .card-footer ul li i {
   font-size: 2.5em;
-  color: #263238 ;
+  color: #fff; ;
+}
+
+@media (max-width: 576px) {
+
+  .btn-small {
+    margin: 5px;
+    color: #fff;
+}
+
+.card-panel {
+  
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
 }
