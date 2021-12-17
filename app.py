@@ -69,7 +69,7 @@ def login():
     users to login. Redirects to profile on successful login.
     """
     if request.method == "POST":
-        # check if username already exists in db     
+        # check if username already exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -80,10 +80,9 @@ def login():
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(
                             request.form.get("username")))
-                return redirect(url_for(
-                            "profile", username=session["user"]))        
+                return redirect(url_for("profile", username=session["user"]))
             else:
-                # invalid password match  
+                # invalid password match
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
 
@@ -306,7 +305,7 @@ def handle_csrf_error(error):
     """
     route to handle bad request 400 error
     """
-    return render_template({"400.html": error.description}), 400 
+    return render_template({"400.html": error.description}), 400
 
 
 if __name__ == "__main__":
