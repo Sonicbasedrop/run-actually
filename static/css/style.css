@@ -6,21 +6,19 @@
   border: 0;
 }
 
+/* navbar */
+
 nav.nav-extended .nav-wrapper {
   min-height: 150px;
   line-height: 10;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #455a64; 
+ 
 }
 
 .brand-logo {
   margin-left: 15px;
+  margin-top: 2px;
 }
-/*
-div .nav-wrapper {
-  height: 100%;
-  line-height: 4vh;
-}
-*/
 
 #page-title {
    font-family: "Permanent Marker", sans-serif;
@@ -29,7 +27,7 @@ div .nav-wrapper {
 
 body {
   
-  background-image: url("../images/francesco-gallarotti-Zp-wTck-3Zw-unsplash.jpg");
+  background-image: url("../images/jane-palash-yimb1ePGs00-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -37,6 +35,18 @@ body {
   flex-direction: column;
 }
 
+
+.card-panel {
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.collapsible {
+  background-color: rgba(95, 93, 93, 0.5); 
+}
+
+.collapsible-header {
+  background-color: rgba(97, 96, 96, 0.5); 
+}
 
 
 main,
@@ -68,7 +78,7 @@ a {
 }
 /* modal */
 #warning {
-  color: red;
+  color: rgb(0, 162, 255);
 }
 
 /* contact form */
@@ -82,6 +92,8 @@ a {
 /* footer */
 .page-footer {
   min-height: 100px;
+  background-color: rgba(0, 0, 0, 0.5); 
+  
   left: 0;
   bottom: 0;
   width: 100%;
@@ -89,13 +101,14 @@ a {
 }
 
 .page-footer p>span {
-    color: #000;
+    color: #1292fa;;
 }
 
 footer .column i  {
   padding: 5px;
   font-size: large;
-
+  color: #4db6ac;
+  line-height: 2;
 }
 
 
