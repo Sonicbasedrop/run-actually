@@ -54,7 +54,7 @@ def signup():
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(signup)
-        # put the new user into'session'cookie  
+        # put the new user into'session'cookie
         session["user"] = request.form.get("username").lower()
         flash("Signup Successful!")
         return redirect(url_for("profile", username=session["user"]))
@@ -82,8 +82,8 @@ def login():
                             request.form.get("username")))
                 return redirect(url_for(
                             "profile", username=session["user"]))        
-            else: 
-                # invalid password match      
+            else:
+                # invalid password match  
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
 
@@ -189,6 +189,7 @@ def edit_event(event_id):
         mongo.db.events.update_one(
             {"_id": ObjectId(event_id)}, {"$set": submit})
         flash("Event Successfully Updated")
+        return redirect(url_for("get_events"))
 
     event = mongo.db.events.find_one({"_id": ObjectId(event_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -301,11 +302,11 @@ def internal_error(error):
 
 
 @app.errorhandler(CSRFError)
-def handle_csrf_error(e):
+def handle_csrf_error(error):
     """
     route to handle bad request 400 error
     """
-    return render_template({"400.html": e.description}), 400    
+    return render_template({"400.html": error.description}), 400 
 
 
 if __name__ == "__main__":
