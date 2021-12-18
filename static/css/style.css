@@ -43,6 +43,10 @@ body {
   background-color: rgba(0, 0, 0, 0.5); 
 }
 
+.card{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .collapsible {
   
   background-color: rgba(95, 93, 93, 0.5); 
@@ -72,6 +76,21 @@ a {
 
 .flashes h4 {
     line-height: 2;
+}
+.reset {
+  font-size: 18px;
+}
+
+.search {
+  font-size: 18px;
+}
+
+.edit {
+  font-size: 18px;
+}
+
+.delete {
+  font-size: 18px;
 }
 
 .btn-small {
