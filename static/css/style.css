@@ -11,7 +11,7 @@
 nav.nav-extended .nav-wrapper {
   min-height: 155px;
   line-height: 10;
-  background-color: #455a64; 
+  background-color: #78909c; 
  
 }
 
@@ -77,8 +77,9 @@ a {
 .btn-small {
   font-size: 18px;
     margin: 5px;
+    color: #FCFCFC;
     background-color: #136259;
-    color: #fff;
+   
 }
 
 
