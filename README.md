@@ -81,7 +81,7 @@ that I can easily return to the website if I navigate to a page that doesn't exi
 * Admin ability to add, edit, delete categories.
 * Admin ability to delete user account.
 
-![Importance and Difficulty](readme_images/importance.png)
+![Importance and Difficulty](readme_images/dificulty-importance.png)
 ### **The Structure Plane**
 User Story:
 > As a user, I want the main purpose of the site to be clear so that I immediately know what the site is 
