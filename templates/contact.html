@@ -14,7 +14,7 @@
                       <i class="fas fa-user-alt prefix text-darken-4"></i>
                       <input id="name" name="name" type="text" minlength="3"
                       maxlength="25" pattern="^[a-öA-Ö0-9 @.,-_*#]{3,25}$" class="form-control validate" required>
-                      <label for="name" class="form-label">Name</label>
+                      <label for="name" aria-label="Name filed in contact form" class="form-label">Name</label>
                   </div>
               </div>
               <!-- email -->
@@ -23,7 +23,7 @@
                       <i class="fas fa-envelope prefix text-darken-4"></i>
                       <input type="text" name="emailaddress" id="emailaddress" minlength="3"
                       maxlength="25" pattern="^[a-öA-Ö0-9 @.,-_*#]{3,25}$" class="form-control validate" required>
-                      <label for="emailaddress" class="form-label">Email</label>
+                      <label for="emailaddress" aria-label="Email filed in contact form"class="form-label">Email</label>
                   </div>
               </div>
               <!-- comment -->
@@ -32,7 +32,7 @@
                       <i class="fas fa-comment prefix text-darken-4"></i>
                       <label for="comments" class="form-label">Comment</label>
                       <textarea id="comments" name="comments" minlength="5" maxlength="50"
-                       class="materialize-textarea validate" required></textarea>
+                      aria-label="Textarea in contact form" class="materialize-textarea validate" required></textarea>
                   </div>
               </div>
               <!-- email reponse -->
@@ -40,7 +40,7 @@
               </div>
               <!-- submit comment button-->
               <div class="row center-align">
-                  <button type="submit" class="col s12 m8 offset-m2 btn-small darken-4">
+                  <button type="submit" aria-label="Submit Button in contact form" class="col s12 m8 offset-m2 btn-small darken-4">
                       Submit Comment
                   </button>
               </div>
