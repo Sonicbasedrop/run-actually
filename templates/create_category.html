@@ -11,7 +11,7 @@
       <div class="input-field col s12">
         <i class="fas fa-folder-open prefix text-darken-4"></i>
         <input id="category_name" name="category_name" minlength="4" maxlength="25" 
-        type="text" pattern="^[a-öA-Ö0-9 @.,-_*#]{4,25}$" class="validate"
+        type="text" pattern="^[a-öA-Ö0-9 @.,-_*#]{4,25}$" aria-label="Category Name"class="validate"
           required>
         <label for="category_name">Category Name</label>
       </div>
@@ -20,10 +20,10 @@
     <div class="row">
       <div class="col s12 center-align">
         <!-- cancel button -->
-        <a href="{{ url_for('get_categories') }}" class="btn-small red text-darken-4">
+        <a href="{{ url_for('get_categories') }}" aria-label="Cancel Button" class="btn-small red text-darken-4">
           Cancel <i class="fas fa-times-circle right"></i>
       </a>
-        <button type="submit" class="btn-small darken-4">
+        <button type="submit" aria-label="Create Button" class="btn-small darken-4">
           Create <i class="fas fa-plus-square right"></i>
         </button>
       </div>
