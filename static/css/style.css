@@ -24,6 +24,7 @@ nav.nav-extended .nav-wrapper {
 
 #page-title {
    font-family: "Permanent Marker", sans-serif;
+   color: #136259;
 }
 
 
@@ -37,6 +38,18 @@ body {
   flex-direction: column;
 }
 
+.sub-heading {
+  color: #0a0a0a;
+}
+
+.new-here, .already {
+    color: rgb(29, 4, 250);
+    font-size: large;
+}
+
+.log, .sign {
+  color: #070706;
+}
 
 .card-panel {
   
@@ -79,18 +92,22 @@ a {
 }
 .reset {
   font-size: 18px;
+  margin: 5px;
 }
 
 .search {
   font-size: 18px;
+  margin: 5px;
 }
 
 .edit {
   font-size: 18px;
+  margin: 5px;
 }
 
 .delete {
   font-size: 18px;
+  margin: 5px;
 }
 
 .btn-small {
@@ -101,7 +118,6 @@ a {
    
 }
 
-
 .collapsible-header .col strong {
     margin: 5px;
     line-height: 42px;
@@ -109,6 +125,14 @@ a {
 /* modal */
 #warning {
   color: rgb(255, 0, 0);
+}
+
+.modal-canc {
+  color: red;
+}
+
+.modal-del {
+  color: green;
 }
 
 /* contact form */
@@ -122,7 +146,7 @@ a {
 /* footer */
 .page-footer {
   min-height: 100px;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(107, 107, 107, 0.5); 
   left: 0;
   bottom: 0;
   width: 100%;
@@ -130,7 +154,7 @@ a {
 }
 
 .page-footer p>span {
-    color: #1292fa;;
+    color: #f4f6f8;;
 }
 
 footer .column i  {
@@ -144,7 +168,7 @@ footer .column i  {
   /* 404 error page */
 
   .mainbox {
-    background-color:  rgba(242, 246, 248, 0.1);
+    background-color:  rgba(252, 253, 253, 0);
     margin: auto;
     height: 600px;
     width: 600px;
@@ -220,8 +244,9 @@ footer .column i  {
 #myBtn {
   width: 100px;
   text-transform: uppercase;
-  font-size: 13px;
-  padding: 9px;
+  font-size: 18px;
+  padding: 6px;
+  margin: 5px;
   border: none;
   background: rgb(0, 0, 0);
   color: #fff;
