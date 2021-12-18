@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h4 class="center-align" id="page-title">Edit Event</h4>
+<h4 class="center-align" aria-label="Page Title"  id="page-title">Edit Event</h4>
 <div class="container">
 <div class="row card-panel">
   <form class="col s12" method="POST" action="{{ url_for('edit_event', event_id=event._id) }}">
@@ -11,7 +11,7 @@
       <div class="input-field col s12">
         <i class="fas fa-folder-open prefix text-darken-4"></i>
         <select id="category_name" name="category_name" type="text"
-        pattern="^[a-öA-Ö0-9 @.,-_*#]{5,25}$" class="validate" required>
+        pattern="^[a-öA-Ö0-9 @.,-_*#]{5,25}$" aria-label="Category Selection Field"  class="validate" required>
           <option value="" disabled>Choose Category</option>
           {% for category in categories %}
              {% if category.category_name == event.category_name %}
@@ -30,7 +30,7 @@
         <i class="fas fa-pencil-alt prefix text-darken-4"></i>
         <input id="event_name" name="event_name" minlength="5" maxlength="50" 
         value="{{ event.event_name }}" type="text"
-        pattern="^[a-öA-Ö0-9 @.,-_*#]{5,25}$" class="validate" required>
+        pattern="^[a-öA-Ö0-9 @.,-_*#]{5,25}$" aria-label="Event Name Field" class="validate" required>
         <label for="event_name">Event Name</label>
       </div>
     </div>
@@ -40,7 +40,7 @@
         <i class="fas fa-location prefix text-darken-4"></i>
         <input id="location" name="location" minlength="5" maxlength="50" 
         type="text" value="{{ event.location }}"
-        pattern="^[a-öA-Ö0-9 @.,-_*#]{5,50}$" class="validate" required>
+        pattern="^[a-öA-Ö0-9 @.,-_*#]{5,50}$" aria-label="Location Name Field" class="validate" required>
         <label for="location">Location</label>
       </div>
     </div>
@@ -49,7 +49,7 @@
       <div class="input-field col s12">
         <i class="fas fa-calendar-alt prefix text-darken-4"></i>
         <input id="date" name="date" type="text"
-         value="{{ event.date }}" class="datepicker validate" required>
+         value="{{ event.date }}" aria-label="Date Picker" class="datepicker validate" required>
         <label for="date">Date</label>
       </div>
     </div>
@@ -59,7 +59,7 @@
         <i class="fas fa-align-left prefix text-darken-4"></i>
         <textarea id="event_description" name="event_description" minlength="5"
          maxlength="200" type="text" 
-         pattern="^[a-öA-Ö0-9 @.,-_*#]{5,200}$" class="materialize-textarea validate" required>
+         pattern="^[a-öA-Ö0-9 @.,-_*#]{5,200}$" aria-label="Event Description Field" class="materialize-textarea validate" required>
             {{- event.event_description -}}
         </textarea>
         <label for="event_description">Event Description</label>
@@ -74,7 +74,7 @@
             {% if event.is_urgent == "on" %}
             <input type="checkbox" id="is_urgent" name="is_urgent" checked>
             {% else %}
-            <input type="checkbox" id="is_urgent" name="is_urgent">
+            <input type="checkbox" id="is_urgent" aria-label="Signed up to participate in race toggle"name="is_urgent">
             {% endif %}
             <span class="lever"></span>
             Signed up for race
@@ -86,10 +86,10 @@
     <div class="row">
       <div class="col s12 center-align">
          <!-- cancel button -->
-        <a href="{{ url_for('get_events') }}" class="btn-small red text-darken-4">
+        <a href="{{ url_for('get_events') }}" aria-label="Cancel Button" class="btn-small red text-darken-4">
           Cancel <i class="fas fa-times-circle right"></i>
         </a>
-        <button type="submit" class="btn-small darken-4">
+        <button type="submit" aria-label="Edit Event Button" class="btn-small darken-4">
           Edit Event <i class="fas fa-edit right"></i>
         </button>
       </div>
