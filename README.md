@@ -1,4 +1,4 @@
-![RUN||actually logo](readme_images/smallrunlogo.png)
+![RUN||actually logo](static/images/runsmlogo.png)
 # RUN||actually 
 
 Run actually is a event finder site for people passionate about the art of running fitness & health and in general. I't all about getting people outdoors and active. The live site will be found _**here**_.
@@ -313,9 +313,9 @@ users. In production these are stored in Heroku.
 ### Design
 
 #### Planned Colour Scheme
-The main background colour is a shade of the colour blue ![#008CFF](readme_images/runblue.png) 
+The main background colour is 
  
-The main website text is black ![#000000](readme_images/runblack.png)
+The main website text is black 
 #### Typography
 The tag line text on the home page used is 'Permanent Marker' and the font for all Page title used is 'Zilla Slab Highlight' the expanded materialize collapsible element headings use the font 'Nixie One' while the 
 rest of the websites content uses the 'Darker Grotesque' font.
