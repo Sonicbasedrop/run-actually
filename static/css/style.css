@@ -28,11 +28,7 @@ nav.nav-extended .nav-wrapper {
   font-family: "Montserrat", sans-serif;
 }
 
-#page-title {
-   font-family: "Permanent Marker", sans-serif;
-   color: #136259;
-}
-
+/* body */
 
 body {
   
@@ -44,14 +40,24 @@ body {
   flex-direction: column;
 }
 
-.response {
-  color: #fff;
+#page-title {
+  font-family: "Permanent Marker", sans-serif;
+  color: #136259;
 }
+
 
 .sub-heading {
   color: #0a0a0a;
   font-family: "Montserrat", sans-serif;
 }
+
+/* email response text */
+
+.response {
+  color: #fff;
+}
+
+/* links and text on signup/login page */
 
 .new-here, .already {
     color: rgb(29, 4, 250);
@@ -61,6 +67,8 @@ body {
 .log, .sign {
   color: #070706;
 }
+
+/* card-panel and collapsible header */
 
 .card-panel {
   
@@ -79,6 +87,12 @@ body {
 .collapsible-header {
  
   background-color: rgba(97, 96, 96, 0.5); 
+}
+
+.collapsible-header .col strong {
+  margin: 5px;
+  line-height: 42px;
+  font-family: "Montserrat", sans-serif;
 }
 
 
@@ -100,6 +114,7 @@ a {
     line-height: 2;
     font-family: "Montserrat", sans-serif;
 }
+/* buttons */
 
 .reset {
   font-size: 18px;
@@ -134,11 +149,7 @@ a {
    
 }
 
-.collapsible-header .col strong {
-    margin: 5px;
-    line-height: 42px;
-    font-family: "Montserrat", sans-serif;
-}
+
 /* modal */
 #warning {
   color: rgb(255, 0, 0);
