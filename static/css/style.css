@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Nixie+One&family=Permanent+Marker&family=Poppins:wght@100;200;900&family=Montserrat:wght@100;300;500&family=Zilla+Slab+Highlight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Montserrat:wght@100;300;500&display=swap');
 
 * {
   margin: 0;
@@ -11,7 +11,8 @@
 nav.nav-extended .nav-wrapper {
   min-height: 155px;
   line-height: 10;
-  background-color: #78909c; 
+  background-color: #78909c;
+  
  
 }
 
@@ -20,6 +21,11 @@ nav.nav-extended .nav-wrapper {
   margin-top: 10px;
   max-height: 90%;
   max-width: 90%;
+}
+
+.side-log {
+  color: #136259;
+  font-family: "Montserrat", sans-serif;
 }
 
 #page-title {
@@ -44,6 +50,7 @@ body {
 
 .sub-heading {
   color: #0a0a0a;
+  font-family: "Montserrat", sans-serif;
 }
 
 .new-here, .already {
@@ -70,9 +77,7 @@ body {
 }
 
 .collapsible-header {
-  /*
-  background-color: #bdbdbd;
-  */
+ 
   background-color: rgba(97, 96, 96, 0.5); 
 }
 
@@ -93,25 +98,31 @@ a {
 
 .flashes h4 {
     line-height: 2;
+    font-family: "Montserrat", sans-serif;
 }
+
 .reset {
   font-size: 18px;
   margin: 5px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .search {
   font-size: 18px;
   margin: 5px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .edit {
   font-size: 18px;
   margin: 5px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .delete {
   font-size: 18px;
   margin: 5px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .btn-small {
@@ -119,12 +130,14 @@ a {
     margin: 5px;
     color: #FCFCFC;
     background-color: #136259;
+    font-family: "Montserrat", sans-serif;
    
 }
 
 .collapsible-header .col strong {
     margin: 5px;
     line-height: 42px;
+    font-family: "Montserrat", sans-serif;
 }
 /* modal */
 #warning {
@@ -157,8 +170,14 @@ a {
    
 }
 
+.foot-txt {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
 .page-footer p>span {
-    color: #f4f6f8;;
+    color: #f4f6f8;
+    font-family: "Montserrat", sans-serif;
 }
 
 footer .column i  {
@@ -242,6 +261,7 @@ footer .column i  {
   color: #fff;
   width: 100%;
   padding: 20px;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Style the button used to pause/play the video */
@@ -262,19 +282,3 @@ footer .column i  {
   color: #000;
 }
 
-/*  Profile page card  */
-
-
-@media (max-width: 576px) {
-
-  .btn-small {
-    margin: 5px;
-    color: #fff;
-}
-
-.card-panel {
-  
-  background-color: rgba(0, 0, 0, 0.5); 
-}
-
-}
