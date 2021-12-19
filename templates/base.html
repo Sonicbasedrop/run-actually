@@ -31,7 +31,7 @@
   <!-- top nav starts here -->
   <nav class="nav-extended text-shadow" aria-label="Top Navigation bar with links to other pages on website">
     <div class="nav-wrapper">
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+      <a href="{{ url_for('home') }}" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
       <a href="{{ url_for('home') }}">
         <img src="{{ url_for('static', filename='images/greenroundlogo.png') }}"  aria-label="Site Logo in Top navigation with link to home page" class="brand-logo responsive"
           alt="Site Logo"></a>
@@ -58,7 +58,7 @@
   <!-- mobile sidenav starts here -->
   <ul class="sidenav" id="mobile-demo">
     <li>
-      <h4 class="center-align light-blue-text text-darken-4">RUN||actually</h4>
+      <h5 class="center-align side-log">RUN||actually</h5>
     </li>
     <li><a href="{{ url_for('home') }}">Home</a></li>
     <li><a href="{{ url_for('get_events') }}">Events</a></li>
@@ -95,7 +95,7 @@
       <div class="row">
         <!-- socials links -->
         <div class="col s12 m6 l4">
-          <h5 class="white-text">Follow Us</h5>
+          <h5 class="foot-txt">Follow Us</h5>
           <div class="column text-light" aria-label="Social media div">
             <span>
               <a href="http://www.facebook.com" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -107,14 +107,14 @@
         </div>
         <div class="col s12 m6 l4">
           <!-- about us info -->
-          <h5 class="white-text">About Us</h5>
+          <h5 class="foot-txt">About Us</h5>
           <ul>
             <li><a href="{{ url_for('about') }}" aria-label="About Us Page Button" class="waves-effect waves-light btn-small">About</a></li>
           </ul>
         </div>
         <div class="col s12 m6 l4">
           <!-- contact info -->
-          <h5 class="white-text">Contact Us</h5>
+          <h5 class="foot-txt">Contact Us</h5>
           <ul>
             <li><a href="{{ url_for('contact') }}" aria-label="Contact Page Button" class="waves-effect waves-light btn-small">Contact</a></li>
           </ul>
