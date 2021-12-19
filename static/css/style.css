@@ -38,6 +38,10 @@ body {
   flex-direction: column;
 }
 
+.response {
+  color: #fff;
+}
+
 .sub-heading {
   color: #0a0a0a;
 }
