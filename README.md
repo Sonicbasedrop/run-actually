@@ -96,7 +96,7 @@ Implementation:
 A site logo will be displayed on the main navigation menu. This should be 
 displayed on all webpages.
 
-The Website title will be displated as a h2 element on the home page and a description of the site will be displayed on the Home page so that is evident of the websites purpose as soon as the user visits the site.
+The Website title will be displated as a h3 element on the home page and a description of the site will be displayed on the Home page so that is evident of the websites purpose as soon as the user visits the site.
 
 User Story:
 > As a user, I want to easily navigate the site so that I can find content quickly with ease.
@@ -167,13 +167,9 @@ alert them whether the update or delete on their event was successful or failed.
 
 A Sign In page will be implemented to allow registered users the ability to login in to their account. 
 
-Once a user has successfully logged in, they will be redirected to their profile page. The users basic 
-details will be displayed on their profile, along with any events they have created. The user will be able 
-to update or delete their events from the profile page. This page will only be available to logged in users,
-this includes the visibility of the navigation menu item.
+Once a user has successfully logged in, they will be redirected to the events page. The user will there have the ability to search the data base for upcoming events,
 
-A Log Out button will be displayed to users who are logged in. When clicked this will sign the user out of the 
-website and redirect them to the home page.
+A Log Out button will be displayed to users who are logged in. When clicked this will log out the user out of the website and redirect them to the log in page.
 
 A Create Event page will be implemented that will be acessible and visible on the navigation menu to logged 
 in users. The user will be able to create an event from this page. The event information will be stored in 
@@ -186,15 +182,15 @@ User Story:
 
 Acceptance Criteria:
 * Events must be displayed to all users regardless of being logged in.
-* Users should be able to search for events by Date, Location or Event Category.
+* Users should be able to search for events by Event name, Location or Event Category.
 
 Implementation:
 
 An Events page will be implemented that is displayed to all users that is accessible to logged in or guests. 
-This page will display the next six Runners events from today's date on a materialize collapsible element. In order to make use of space, these events will be collapsable and can be expanded to view details on click.
+This page will display the all Runners events from today's date on a materialize collapsible element. In order to make use of space, these events will be collapsable and can be expanded to view details on click.
 
-A search box will be displayed on screen which will allow users to search for events based on Date, Event 
-Type or Location. This will return a filtered, full list events for the current search criteria. 
+A search box will be displayed on screen which will allow users to search for events based on Event name, Event 
+Category or Location. This will return a filtered, full list events for the current search criteria. 
 This will be implemented by using a database index that will be created on the MongoDB collection events.
 
 User Story:
@@ -230,7 +226,7 @@ website.
 
 Implementation:
 
-A custom 404 page will be created so that if a user attempts to nagiate to a page that it not found, an 
+A custom 404 page will be created so that if a user attempts to navigate to a page that it not found, an 
 error will be displayed. This page will contain a clickable anchor link to allow the user to redirect to 
 the main website without needing to use the browser navigation buttons.
 
@@ -313,18 +309,57 @@ users. In production these are stored in Heroku.
 ### Design
 
 #### Planned Colour Scheme
-The main background colour is 
+The main background colours are a grey-blue color #78909c ![](readme_images/blue-grey.png) all buttons and h3 headings  are green #136259 ![](readme_images/green.png)
  
-The main website text is black 
+The main website text is black #000 ![](readme_images/black.png)
 #### Typography
-The tag line text on the home page used is 'Permanent Marker' and the font for all Page title used is 'Zilla Slab Highlight' the expanded materialize collapsible element headings use the font 'Nixie One' while the 
-rest of the websites content uses the 'Darker Grotesque' font.
+The title page font used for the webpage is 'Permanent Marker' and the plain text for the rest of the site is the font 'Montserrat'. 
 
 #### Imagery
-Different background images will be used on all pages displaying diffrent outdoors runners activaties
-taken from [Unsplash](https://unsplash.com/). 
+The background image used on all pages is taken with permission from a [Unsplash](https://unsplash.com/) contributar by the name of Alessio Soggetti see his fine work [Here](https://unsplash.com/@asoggetti)  
 
 The website logo was created using online software from the website [Canva](https://www.canva.com/).
+
+## Difference in design
+* Some of the design was changed during the development process. 
+Some features in the profile page have postponed to the next itteration of the webiste, e.g. user ability to update profile page. 
+
+* The 404 page was changed to another design from the  original design.
+
+* The 400 Error page was not included in the original design but was implemented with the same page layout as the 404 page to account for any bad request errors.
+
+* The 500 Error page was not included in the original design but was implemented with the same page layout as the 404 page to account for any internal server errors.
+
+* Additional verification was added to the delete event button for the user to confirm they want to delete the event. This was added so the user doesn't accidentally delete an event and was implemented using a modal with the option to cancel or delete.
+
+* Additional verification was added to the delete category button for the site owner to confirm they want to delete a category. This was added so the user doesn't accidentally delete an event and was implemented using a modal with the option to cancel or delete.
+
+* The About page was changed to another design for a better user experience.
+
+## Features
+
+### Existing features
+* Admin log-in
+* Home page displaying full screen video and information about the purpose of the site.
+* User's ability to sign up.
+* User's ability to log in and log out function.
+* User's ability to create events.
+* User's ability to edit events.
+* User's ability to delate events created by user.
+* Event page that displays all upcoming events.
+* User's ability to search for events in the data base, via a search field.
+* Create event page allowing signed in users to create events.
+* Mobile responsive design. 
+* Contact page with form and EmailJS function so that user can contact site owner.
+* Site wide navbar footer containing links to contact form, about page and copyright information.
+
+### Features left to implement
+* User's ability to upload images
+* Map API to locate race events
+* Race alert to alert users of upcoming races
+* Ability to sign-up for newsletter
+
+
 
 
 
