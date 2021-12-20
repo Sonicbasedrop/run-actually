@@ -3,7 +3,7 @@
 
 Run actually is a runners event finder site and our main objective is to get people off the sofa and enjoying being outdoors.We just love to run and we hope you will too after experiencing life on the trails.The live site can be found [here](https://run-actually.herokuapp.com/)
 
-![Mockup](readme_images/techsini.png)
+![Mockup](readme_images/techsini-mockup.png)
 
 ## Table of Content
 * [User Experience Design (UX)](#User-Experience-Design)
