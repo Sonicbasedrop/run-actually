@@ -48,6 +48,7 @@
       <p>{{ event.event_description }}</p>
       <p><em>by: {{ event.created_by }}</em></p>
     </div>
+  
        <!-- Modal Structure -->
        <div id="delete-modal-{{event._id}}" class="modal">
         <div class="modal-content">
@@ -61,12 +62,14 @@
             class="modal-close modal-canc waves-effect waves-green btn-flat">Cancel</a>
         </div>
     </div>
+  
   </li>
   {% endfor %}
 </ul>
 {% else %}
+</div>
     <h4 class="red-text text-darken-4 center-align">No Results Found</h4>
-  </div>
+  
 {% endif %}
 
 
