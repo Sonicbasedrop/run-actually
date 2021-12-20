@@ -30,7 +30,7 @@
       <div class="col s3">
            <i class="fas fa-caret-down"></i>
             {% if session.user|lower == event.created_by|lower %}
-             <a href="#delete-modal-{{event._id}}" aria-label="Delete Event Button,which promts a warning message asking user to confirm if user inteded to delete event" class="waves-effect waves-light btn-small modal-trigger green accent-4">Delete</a>
+             <a href="#delete-modal-{{event._id}}" aria-label="Delete Event" class="waves-effect waves-light btn-small modal-trigger green accent-4">Delete</a>
              <a href="{{ url_for('edit_event', event_id=event._id) }}" aria-label="Edit Event Button" class=" waves-effect waves-light btn-small light-blue lighten-1">Edit</a>
             {% endif %}
       </div>
@@ -49,7 +49,7 @@
       <p><em>by: {{ event.created_by }}</em></p>
     </div>
        <!-- Modal Structure -->
-       <div id="delete-modal-{{event._id}}" aria-label="Delete Event Pop Up Modal" class="modal">
+       <div id="delete-modal-{{event._id}}" aria-label="Delete Event" class="modal">
         <div class="modal-content">
             <h4 id="warning">WARNING! <i class="fas fa-exclamation-triangle"></i>
             </h4> 
