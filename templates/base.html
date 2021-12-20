@@ -35,20 +35,20 @@
       <a href="{{ url_for('home') }}">
         <img src="{{ url_for('static', filename='images/greenroundlogo.png') }}"  aria-label="Site Logo in Top navigation with link to home page" class="brand-logo responsive" alt="Site Logo"></a>
           <ul class="right hide-on-med-and-down">
-        <li><a href="{{ url_for('home') }}" aria-label="Home Page Button" class="waves-effect waves-light btn-small">Home</a></li>
-        <li><a href="{{ url_for('get_events') }}" aria-label="Events Page Button" class="waves-effect waves-light btn-small">Events</a></li>
+        <li><a href="{{ url_for('home') }}" aria-label="Home Page" class="waves-effect waves-light btn-small">Home</a></li>
+        <li><a href="{{ url_for('get_events') }}" aria-label="Events" class="waves-effect waves-light btn-small">Events</a></li>
         {% if session.user %}
-        <li><a href="{{ url_for('create_event') }}" aria-label="Create Event Page Button" class="waves-effect waves-light btn-small">Create Event</a></li>
+        <li><a href="{{ url_for('create_event') }}" aria-label="Create Event" class="waves-effect waves-light btn-small">Create Event</a></li>
         {% if session.user|lower == "admin"|lower %}
-        <li><a href="{{ url_for('get_categories') }}" aria-label="Manage Category Page Button" class="waves-effect waves-light btn-small">Manage Categories</a>
+        <li><a href="{{ url_for('get_categories') }}" aria-label="Manage Category" class="waves-effect waves-light btn-small">Manage Categories</a>
         </li>
         {% endif %}
         <li><a href="{{ url_for('profile', username=session['user']) }}"
             class="waves-effect waves-light btn-small">Profile</a></li>
-        <li><a href="{{ url_for('logout') }}" aria-label="Log Out Button" class="waves-effect waves-light btn-small">Log Out</a></li>
+        <li><a href="{{ url_for('logout') }}" aria-label="Log Out" class="waves-effect waves-light btn-small">Log Out</a></li>
         {% else %}
-        <li><a href="{{ url_for('signup') }}" aria-label="Sign Up Page Button" class="waves-effect waves-light btn-small">Sign Up</a></li>
-        <li><a href="{{ url_for('login') }}" aria-label="Log in Page Button" class="waves-effect waves-light btn-small">Log In</a></li>
+        <li><a href="{{ url_for('signup') }}" aria-label="Sign Up" class="waves-effect waves-light btn-small">Sign Up</a></li>
+        <li><a href="{{ url_for('login') }}" aria-label="Log in" class="waves-effect waves-light btn-small">Log In</a></li>
         {% endif %}
       </ul>
     </div>
@@ -136,11 +136,10 @@
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
   <!-- jQuery get current year function -->
-  <script>
+ <script>
     $("#copyright").text(new Date().getFullYear());
-  </script>
+</script>
   {% block scripts %}
   {% endblock %}
-</body>
-
+   </body>
 </html>
