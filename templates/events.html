@@ -30,7 +30,7 @@
       <div class="col s3">
            <i class="fas fa-caret-down"></i>
             {% if session.user|lower == event.created_by|lower %}
-             <a href="#delete-modal-{{event._id}}" aria-label="Delete Event" class="waves-effect waves-light btn-small modal-trigger green accent-4">Delete</a>
+             <a href="#delete-modal-{{event._id}}" class="waves-effect waves-light btn-small modal-trigger green accent-4">Delete</a>
              <a href="{{ url_for('edit_event', event_id=event._id) }}" aria-label="Edit Event Button" class=" waves-effect waves-light btn-small light-blue lighten-1">Edit</a>
             {% endif %}
       </div>
@@ -51,8 +51,7 @@
        <!-- Modal Structure -->
        <div id="delete-modal-{{event._id}}" aria-label="Delete Event" class="modal">
         <div class="modal-content">
-            <h4 id="warning-1">WARNING! <i class="fas fa-exclamation-triangle"></i>
-            </h4> 
+            <h4 class="warning-1">WARNING! <i class="fas fa-exclamation-triangle"></i></h4> 
             <p>Are you sure you want to delete the {{ event.category_name }} event on {{ event.date }} in  {{ event.location }}?</p>
         </div>
         <div class="modal-footer">
