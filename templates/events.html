@@ -13,8 +13,8 @@
               <label for="query">Search Events</label>
           </div>
           <div class="col s12 m4">
-              <a href="{{ url_for('get_events') }}" aria-label="Reset Button" class="red btn reset text-shadow">Reset</a>
-              <button type="submit" aria-label="Search Button" class="light-blue darken-1 btn search text-shadow">
+              <a href="{{ url_for('get_events') }}" class="red btn reset text-shadow">Reset</a>
+              <button type="submit" class="light-blue darken-1 btn search text-shadow">
                    Search
               </button>
           </div>
@@ -49,7 +49,7 @@
       <p><em>by: {{ event.created_by }}</em></p>
     </div>
        <!-- Modal Structure -->
-       <div id="delete-modal-{{event._id}}" aria-label="Delete Event" class="modal">
+       <div id="delete-modal-{{event._id}}" class="modal">
         <div class="modal-content">
             <h4 class="warning-1">WARNING! <i class="fas fa-exclamation-triangle"></i></h4> 
             <p>Are you sure you want to delete the {{ event.category_name }} event on {{ event.date }} in  {{ event.location }}?</p>
