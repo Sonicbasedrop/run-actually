@@ -8,7 +8,7 @@
   <!-- import font awesome CSS-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
     integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
+    crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css"/>
   <!-- compiled and minified CSS for Materialize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     type="text/css">
@@ -24,9 +24,9 @@
   <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}">
   {% block styless %}
   {% endblock %}
+
   <title>Run||actually</title>
 </head>
-
 <body>
   <!-- top nav starts here -->
   <nav class="nav-extended text-shadow">
@@ -51,7 +51,6 @@
       </ul>
     </div>
 
-    <body>
       <div class="content">
         <!-- The video -->
         <video autoplay muted loop id="myVideo" class="responsive-video" aria-label="Video clip of a man and woman jogging in a urban area">
@@ -73,7 +72,7 @@
   </nav>
   <!-- top nav ends here -->
   <!-- mobile sidenav starts here -->
-  <ul class="sidenav" id="mobile-demo">
+<ul class="sidenav" id="mobile-demo">
     <li>
       <h5 class="center-align side-log">RUN||actually</h5>
     </li>
@@ -89,7 +88,7 @@
     <li><a href="{{ url_for('login') }}">Log In</a></li>
     {% endif %}
 
-  </ul>
+</ul>
   <!-- mobile side nav ends here -->
   <!-- load jQuery and Materialize JS files -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -100,13 +99,13 @@
 
   <!-- jQuery get current year function -->
   <script>
-    // Get the video
+  // Get the video
     var video = document.getElementById("myVideo");
 
     // Get the button
     var btn = document.getElementById("myBtn");
 
-    // Pause and play the video, and change the button text
+  // Pause and play the video, and change the button text
     function myFunction() {
       if (video.paused) {
         video.play();
@@ -116,7 +115,7 @@
         btn.innerHTML = "Play";
       }
     }
-  </script>
+ </script>
   {% block scripts %}
   {% endblock %}
 </body>
