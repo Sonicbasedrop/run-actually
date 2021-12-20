@@ -157,11 +157,11 @@ a {
 
 
 /* modal */
-#warning {
+.modal-content {
   color: rgb(255, 0, 0);
 }
 
-.warning-1 {
+.modal-content-1 {
   color: rgb(255, 0, 0);
 }
 
