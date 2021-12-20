@@ -53,7 +53,7 @@
 
       <div class="content">
         <!-- The video -->
-        <video autoplay muted loop id="myVideo" class="responsive-video" aria-label="Video clip of a man and woman jogging in a urban area">
+        <video muted loop id="myVideo" class="responsive-video" aria-label="Video clip of a man and woman jogging in a urban area">
           <source src="static/video/jogging.mp4" type="video/mp4">
         </video>
 
@@ -64,7 +64,7 @@
             memorable and brilliantly sweaty experiences.
           </h5>
           <!-- Use a button to pause/play the video with JavaScript -->
-          <button id="myBtn" onclick="myFunction()">Pause</button>
+          <button id="myBtn" onclick="myFunction()">Play</button>
           <a href="{{ url_for('about') }}" class="waves-effect waves-light btn-small">About</a>
           <a href="{{ url_for('contact') }}" class="waves-effect waves-light btn-small">Contact</a>
         </div>
@@ -97,7 +97,6 @@
   <!-- import custom JS -->
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
-  <!-- jQuery get current year function -->
   <script>
   // Get the video
     var video = document.getElementById("myVideo");
@@ -106,7 +105,7 @@
     var btn = document.getElementById("myBtn");
 
   // Pause and play the video, and change the button text
-    function myFunction() {
+  function myFunction() {
       if (video.paused) {
         video.play();
         btn.innerHTML = "Pause";
@@ -115,6 +114,11 @@
         btn.innerHTML = "Play";
       }
     }
+
+
+
+
+
  </script>
   {% block scripts %}
   {% endblock %}
