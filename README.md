@@ -336,6 +336,8 @@ Some features in the profile page have postponed to the next itteration of the w
 
 * The About page was changed to another design for a better user experience.
 
+* The hero image on the index page was changed to fullscreen video for a better user experience.
+
 ## Features
 
 ### Existing features
