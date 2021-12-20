@@ -2,31 +2,31 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- import font awesome CSS-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
-  <!-- compiled and minified CSS for Materialize -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    type="text/css">
-  <!-- import custom CSS -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-  <!-- import favicon-->
-  <link rel="apple-touch-icon" sizes="180x180"
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- import font awesome CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
+     <!-- compiled and minified CSS for Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      type="text/css">
+      <!-- import custom CSS -->
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <!-- import favicon-->
+    <link rel="apple-touch-icon" sizes="180x180"
     href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
-  <link rel="icon" type="image/png" sizes="32x32"
+    <link rel="icon" type="image/png" sizes="32x32"
     href="{{ url_for('static', filename='iamges/favicon/favicon-32x32.png') }}">
-  <link rel="icon" type="image/png" sizes="16x16"
+    <link rel="icon" type="image/png" sizes="16x16"
     href="{{ url_for('static', filename='images/favicon/favicon-16x16.png') }}">
-  <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}">
+
   {% block styless %}
   {% endblock %}
-<title>RUN||actually</title>
+    <title>RUN||actually</title>
 </head>
-
 <body>
   <!-- top nav starts here -->
   <nav  class="nav-extended text-shadow" aria-label="Top Navigation bar with links to other pages on website">
@@ -53,7 +53,6 @@
       </ul>
     </div>
   </nav>
-
   <!-- top nav ends here -->
   <!-- mobile sidenav starts here -->
   <ul class="sidenav" id="mobile-demo">
@@ -73,6 +72,8 @@
     {% endif %}
   </ul>
   <!-- mobile side nav ends here -->
+
+  <!-- moain content starts here-->
   <main>
     <!-- flash messages -->
     {% with messages = get_flashed_messages() %}
