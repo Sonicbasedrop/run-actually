@@ -1,14 +1,14 @@
  // jQuery for MaterializeCSS initialization
 $(document).ready(function(){
-    $('.sidenav').sidenav({edge: "right"});
+    $(".sidenav").sidenav({edge: "right"});
     // collapsible events
-    $('.collapsible').collapsible();
+    $(".collapsible").collapsible();
      // tooltip 
     $(".tooltipped").tooltip();
     // select options
-    $('select').formSelect();
+    $("select").formSelect();
     // modal initialiser
-    $('.modal').modal();
+    $(".modal").modal();
      // date picker 
     $(".datepicker").datepicker({
         format: "dd mmmm, yyyy",
