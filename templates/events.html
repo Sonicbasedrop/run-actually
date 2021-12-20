@@ -30,7 +30,7 @@
       <div class="col s3">
            <i class="fas fa-caret-down"></i>
             {% if session.user|lower == event.created_by|lower %}
-             <a href="#delete-modal-{{event._id}}" class="waves-effect waves-light btn-small modal-trigger green accent-4">Delete</a>
+             <a href="#delete-modal-{{event._id}}" aria-label="Pre Delete Event"class="waves-effect waves-light btn-small modal-trigger green accent-4">Delete</a>
              <a href="{{ url_for('edit_event', event_id=event._id) }}" aria-label="Edit Event Button" class=" waves-effect waves-light btn-small light-blue lighten-1">Edit</a>
             {% endif %}
       </div>
