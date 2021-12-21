@@ -318,7 +318,13 @@ The main website text is black #000 ![Black](readme_images/testing_images/color_
 The title page font used for the webpage is 'Permanent Marker' and the plain text for the rest of the site is the font 'Montserrat'. 
 
 #### Imagery
-The background image used on all pages is taken with permission from a [Unsplash](https://unsplash.com/) contributar by the name of Alessio Soggetti see his fine work [Here](https://unsplash.com/@asoggetti)  
+The background image used on all pages is taken with permission from a [Unsplash](https://unsplash.com/) contributar by the name of Alessio Soggetti see his fine work [Here](https://unsplash.com/@asoggetti).
+
+The 400 400 Bad Request Error image was taken from [ITPro](https://www.itpro.co.uk/)
+
+The 500 Internal Server Error page image was taken from [dribble](https://dribbble.com/shots/4806621-500-Error-Page)
+
+The full screen backgorund video was taken from [mixkit](https://mixkit.co/free-stock-video/man-and-woman-jogging-through-a-park-in-the-city-40754/) mixkit provides a lot of great videos, images, music, and sound effects. Most of it is for free, as my video clipp was. 
 
 The website logo was created using online software from the website [Canva](https://www.canva.com/).
 
@@ -516,6 +522,15 @@ for your own idea. - Definition from [Github Docs](https://docs.github.com/en/fr
 
 ### Code
 [W3Schools](https://www.w3schools.com/howto/howto_css_fullscreen_video.asp) - The code used to implement the full screen video backgound on the landing page was taken from there.
+
+JavaScript Validation function in scripts.js was code from the mini-project Task Manager App from the course.
+
+[Codepen](https://codepen.io/purplexmoss/pen/PoPyzMW) - The used for the 404 Page not found error was taken from codepen.
+
+### Acknowledgements
+I would like to give a special thanks tomy mentor Daisy McGirr, for her patience, guidence all the great advice i recived during this procces, and for her being a wonderful person.
+
+A big thank you to my girlfriend Stina for proofreading everything I write <3
     
 
 
