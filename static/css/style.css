@@ -309,3 +309,327 @@ footer .column i  {
   background: #ddd;
   color: #000;
 }
+
+
+/* --- Media Queries --- */
+@media screen and (max-width: 400px) {
+  nav.nav-extended .nav-wrapper {
+    min-height: 155px;
+    line-height: 10;
+    background-color: #78909c;
+      
+  }
+  
+  
+  ul.right.hide-on-med-and-down {
+    background-color: #78909c;
+    display: inline-flex;
+    
+  }
+  
+  
+  .brand-logo {
+    margin-left: 15px;
+    margin-top: 10px;
+    max-height: 90%;
+    max-width: 90%;
+  }
+  
+  .side-log {
+    color: #136259;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  body {
+  
+    background-image: url("../images/alessio-soggetti-GYr9A2CPMhY-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  #page-title {
+    font-family: "Permanent Marker", sans-serif;
+    color: #136259;
+  }
+  
+  
+  .sub-heading {
+    color: #0a0a0a;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  nav.nav-extended .nav-wrapper {
+    min-height: 155px;
+    line-height: 10;
+    background-color: #78909c;
+      
+  }
+  
+  
+  ul.right.hide-on-med-and-down {
+    background-color: #78909c;
+    display: inline-flex;
+    
+  }
+  
+  
+  .brand-logo {
+    margin-left: 15px;
+    margin-top: 10px;
+    max-height: 90%;
+    max-width: 90%;
+  }
+  
+  .side-log {
+    color: #136259;
+    font-family: "Montserrat", sans-serif;
+  }
+
+
+
+  body {
+  
+    background-image: url("../images/alessio-soggetti-GYr9A2CPMhY-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  #page-title {
+    font-family: "Permanent Marker", sans-serif;
+    color: #136259;
+  }
+  
+  
+  .sub-heading {
+    color: #0a0a0a;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+  
+  .mp4-overlay {
+    position: fixed;
+    bottom: 0;
+    background: rgba(39, 39, 39, 0.5);
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+ 
+  #myBtn {
+    width: 100px;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 6px;
+    margin: 5px;
+    border: none;
+    background: rgb(0, 0, 0);
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: #000;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 576px) {
+  nav.nav-extended .nav-wrapper {
+    min-height: 155px;
+    line-height: 10;
+    background-color: #78909c;
+      
+  }
+  
+  
+  ul.right.hide-on-med-and-down {
+    background-color: #78909c;
+    display: inline-flex;
+    
+  }
+  
+  
+  .brand-logo {
+    margin-left: 15px;
+    margin-top: 10px;
+    max-height: 90%;
+    max-width: 90%;
+  }
+  
+  .side-log {
+    color: #136259;
+    font-family: "Montserrat", sans-serif;
+  }
+
+
+
+  body {
+  
+    background-image: url("../images/alessio-soggetti-GYr9A2CPMhY-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  #page-title {
+    font-family: "Permanent Marker", sans-serif;
+    color: #136259;
+  }
+  
+  
+  .sub-heading {
+    color: #0a0a0a;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+  
+  .mp4-overlay {
+    position: fixed;
+    bottom: 0;
+    background: rgba(39, 39, 39, 0.5);
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+ 
+  #myBtn {
+    width: 100px;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 6px;
+    margin: 5px;
+    border: none;
+    background: rgb(0, 0, 0);
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: #000;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  nav.nav-extended .nav-wrapper {
+    min-height: 155px;
+    line-height: 10;
+    background-color: #78909c;
+      
+  }
+  
+  
+  ul.right.hide-on-med-and-down {
+    background-color: #78909c;
+    display: inline-flex;
+    
+  }
+  
+  
+  .brand-logo {
+    margin-left: 15px;
+    margin-top: 10px;
+    max-height: 90%;
+    max-width: 90%;
+  }
+  
+  .side-log {
+    color: #136259;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  body {
+  
+    background-image: url("../images/alessio-soggetti-GYr9A2CPMhY-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  #page-title {
+    font-family: "Permanent Marker", sans-serif;
+    color: #136259;
+  }
+  
+  
+  .sub-heading {
+    color: #0a0a0a;
+    font-family: "Montserrat", sans-serif;
+  }
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+ 
+  .mp4-overlay {
+    position: fixed;
+    bottom: 0;
+    background: rgba(39, 39, 39, 0.5);
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+
+  #myBtn {
+    width: 100px;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 6px;
+    margin: 5px;
+    border: none;
+    background: rgb(0, 0, 0);
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: #000;
+  }
+
+}
+
+
+
+@media (min-width: 1200px) {
+ 
+}
