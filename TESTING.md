@@ -177,6 +177,48 @@ The python code through was ran true [Pep8 Online](http://pep8online.com/) no er
 <br>
 ## **7. Lighthouse Testing**  
 The Chrome Lighthouse testing was used to audit the performance, accessibility, best practices, and SEO. Below are the results.
+<br>
+!|[Homepage Mobile](readme_images/testing_images/lighthouse/index_mobile.png)
+<br>
+!|[Homepage Desktop](readme_images/testing_images/lighthouse/index_desktop.png)
+<br>
+!|[About Mobile](readme_images/testing_images/lighthouse/about_mobile.png)
+<br>
+!|[About Desktop](readme_images/testing_images/lighthouse/about_desktop.png)
+<br>
+!|[Categories Mobile](readme_images/testing_images/lighthouse/categories_mobile.png)
+<br>
+!|[Categories Desktop](readme_images/testing_images/lighthouse/categories_desktop.png)
+<br>
+!|[Contact Mobile](readme_images/testing_images/lighthouse/contact_mobile.png)
+<br>
+!|[Contact Desktop](readme_images/testing_images/lighthouse/contact_desktop.png)
+<br>
+!|[Create Category Mobile](readme_images/testing_images/lighthouse/create_category_mobile.png)
+<br>
+!|[Create Category Desktop](readme_images/testing_images/lighthouse/create_category_desktop.png)
+<br>
+!|[Create Event Mobile](readme_images/testing_images/lighthouse/create_event_mobile.png)
+<br>
+!|[Create Event Desktop](readme_images/testing_images/lighthouse/create_event_desktop.png)
+<br>
+!|[Events Mobile](readme_images/testing_images/lighthouse/events_mobile.png)
+<br>
+!|[Events Desktop](readme_images/testing_images/lighthouse/events_desktop.png)
+<br>
+!|[Login Mobile](readme_images/testing_images/lighthouse/login_mobile.png)
+<br>
+!|[Login Desktop](readme_images/testing_images/lighthouse/login_desktop.png)
+<br>
+!|[Profile Mobile](readme_images/testing_images/lighthouse/profile_mobile.png)
+<br>
+!|[Profile Desktop](readme_images/testing_images/lighthouse/profile_desktop.png)
+<br>
+!|[Signup Mobile](readme_images/testing_images/lighthouse/signup_mobile.png)
+<br>
+!|[Signup Desktop](readme_images/testing_images/lighthouse/signup_desktop.png)
+
+
 
  
  
