@@ -100,5 +100,48 @@ contains all the details of upcoming events.
    <br>
    ![Manage-Categories](readme_images/testing_images/user_stories_images/categories_page.png)
   <br>
+
+  ## **3. Manual Testing by the developer**  
+### **Browsers Compatibility**  
+The website was tested using the following browsers: Google Chrome,, Opera, Mozilla Firefox, and Safari.  
+
+### **Devices**
+The website was also viewed on the following devices: 
+- Mac laptop
+- Windows Laptop  
+- Tablets: iPad Mini 2 and iPad Pro
+- Mobile: iPhone7, iPhone 8, iPhone 4,  
+- Family members review the site on their devices and did any experience issues.  
+
+ ### **Responsiveness**
+To check the responsiveness of the website across all devices, the developer tools was used regularly during the developing process. 
+
+### **Links**  
+The links were tested to ensure that:  
+- All navigation links are linking correctly.  
+- All input fields and the buttons are functioning as expected 
+- The social media links are working and opening in a new tab.  
+
+### **Forms**
+**The form was also tested to ensure that:**  
+- The required attributes are working.  
+- The regex patterns for username and password are working as expected.
+- The user will be promted if the user uses the rong format when filling out form.  
+- If a user uses the rong format, the site will not brake.
+
+**For Contact Form test was performed to ensure that:**  
+- When a valid Contact form is submitted, a message appear between the textarea and submitbutton "Thank you for your message, have a great day" as a response to the user.  
+- The Contact Form is reset and all fields are empty.  
+- The developer gets the notification message in their inbox. 
+<br>
+
+## **4. W3C Validator Testing**  
+The [W3C Markup Validator Sevice](https://validator.w3.org/) and [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) were used to validate the website to ensure there were no syntax errors in the project. No error was found: 
+
+### **HTML**
+ ![Homepage (index)](readme_images/testing_images/w3c_validator/html/index.png) 
+
+
+   
  
 
