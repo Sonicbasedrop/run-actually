@@ -1,11 +1,11 @@
-![RUN||actually logo](readme_images/runsmlogo.png)
+![RUN||actually logo](readme_images/testing_images/color_palette_moc_logo/runsmlogo.png)
 # RUN||actually - Testing
 
 Back to my main README.md click [here](README.md)<br>
 The live site can be found [here](https://run-actually.herokuapp.com/)
 <br>
 
-*Table of Contents** 
+**Table of Contents** 
 1. [User Stories Testing](User-Stories-Testing)  
    - [Unregistered Users' Goals](Unregistered-Users-Goals)   
    - [Registered Users' Goals](Registered-Users-Goals)  
