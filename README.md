@@ -3,6 +3,8 @@
 
 Run actually is a runners event finder site and our main objective is to get people off the sofa and enjoying being outdoors.We just love to run and we hope you will too after experiencing life on the trails.The live site can be found [here](https://run-actually.herokuapp.com/)
 
+TESTING.md can be found [here](https://github.com/Sonicbasedrop/run-actually/blob/main/TESTING.md)
+
 ![Mockup](readme_images/testing_images/color_palette_moc_logo/techsini-mockup.png)
 
 ## Table of Content
