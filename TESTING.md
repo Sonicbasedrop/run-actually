@@ -136,10 +136,54 @@ The links were tested to ensure that:
 <br>
 
 ## **4. W3C Validator Testing**  
-The [W3C Markup Validator Sevice](https://validator.w3.org/) and [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) were used to validate the website to ensure there were no syntax errors in the project. No error was found: 
+The [W3C Markup Validator Sevice](https://validator.w3.org/) and [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) were used to validate the website to ensure there were no syntax errors. No error was found: 
 
 ### **HTML**
- ![Homepage (index)](readme_images/testing_images/w3c_validator/html/index.png) 
+ !|[Homepage](readme_images/testing_images/w3c_validator/html/index.png) 
+ <br>
+ !|[Signup](readme_images/testing_images/w3c_validator/html/signup.png)
+ <br>
+ !| [Login](readme_images/testing_images/w3c_validator/html/login.png)
+ <br>
+ !| [About](readme_images/testing_images/w3c_validator/html/about.png)
+ <br>
+ !| [Contact](readme_images/testing_images/w3c_validator/html/contact.png) 
+ <br>
+ !|[Events](readme_images/testing_images/w3c_validator/html/events.png)
+ <br>
+ !|[Create Event](readme_images/testing_images/w3c_validator/html/create_event.png)
+ <br>
+ !|[Categories](readme_images/testing_images/w3c_validator/html/categories.png)
+ <br>
+ !|[Create Category](readme_images/testing_images/w3c_validator/html/create_category.png)
+ <br>
+ 
+### **CSS**
+!|[CSS](readme_images/testing_images/w3c_validator/css/css_w3c_vali.png)
+<br>
+## **5. JavaScript Testing**  
+The javascript code through [JSHint](https://jshint.com/), and there were some warnings, but no errors.
+<br>
+!|[EmailJS](readme_images/testing_images/jshint/sendEmailjs.png)
+<br>
+!|[jQuery for MaterializeCSS](readme_images/testing_images/jshint/Materializejs.png)
+<br>
+!|[Get current year JS](readme_images/testing_images/jshint/fullYear.png)
+<br>
+## **6. Pep8 Online Testing**
+The python code through was ran true [Pep8 Online](http://pep8online.com/) no errors found.
+<br>
+!|[Python code](readme_images/testing_images/pep_8/pep8.png)
+<br>
+## **7. Lighthouse Testing**  
+The Chrome Lighthouse testing was used to audit the performance, accessibility, best practices, and SEO. Below are the results.
+
+ 
+ 
+ 
+
+
+
 
 
    
