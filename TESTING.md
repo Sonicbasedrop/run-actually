@@ -218,6 +218,8 @@ The Chrome Lighthouse testing was used to audit the performance, accessibility, 
 <br>
 !|[Signup Desktop](readme_images/testing_images/lighthouse/signup_desktop.png)
 
+* [Back to top of page](https://github.com/Sonicbasedrop/run-actually/blob/main/TESTING.md)
+
 
 
  
