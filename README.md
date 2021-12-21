@@ -440,6 +440,34 @@ Testing is dependent on the website being deployed live on Heroku.
 
 Full test results can be found [here](https://github.com/Sonicbasedrop/run-actually/blob/main/TESTING.md)
 
+## Deployment
+
+### Project Creation
+To create this project I used the CI Gitpod Full Template by navigating 
+[here](https://github.com/Code-Institute-Org/gitpod-full-template) and clicking the 'Use this template' button.
+
+I was then directed to the create new repository from template page and entered in my repo name, then clicked Create repository from template button.
+
+After it was  created, I navigated to my new repository on GitHub and clicked the Gitpod button which built my workspace.
+
+The following commands were used for version control throughout the project:
+
+- git add *filename* - This command was used to add files to the staging area before committing.
+
+- git commit -m "commit message explaining the updates" - This command was used to to commit changes to the local repository.
+
+- git push - This command is used to push all committed changes to the GitHub repository.
+
+### Deployment to Heroku
+
+**Create application:**
+1. Navigate to Heroku.com and login.
+1. Click on the new button.
+1. Select create new app.
+1. Enter the app name.
+1. Select region.
+
+
 
 
 
