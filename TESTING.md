@@ -10,7 +10,8 @@ The live site can be found [here](https://run-actually.herokuapp.com/)
    - [Unregistered Users' Goals](Unregistered-Users-Goals)   
    - [Registered Users' Goals](Registered-Users-Goals)  
    - [Site Owners Goals](Site-Owners-Goals)    
-2. [Manual Testing](Manual-Testing) 
+2. [Manual Testing](Manual-Testing)
+   - [Issues and Resolutions](Issues-and-Resolutions) 
    - [Crud Functinality](Crud-Functionality)  
    - [Browser Compatibility](Browser-Compatibility)   
    - [Devices](Devices)   
@@ -104,11 +105,17 @@ contains all the details of upcoming events.
 
   ## **3. Manual Testing by the developer** 
 
+### **Issues and Resolutions**
+- I hade som issues with the editing function i Python, I contacted tutor support and was informed that the "update()" inwas deprecated and "udate_one()" in in conjunction with       "{"$set": submit})" and it did work.
+
+- I also hade a issue with delete functionality in Python, I found the sulotion on W3Shools.
+"remove()" had been deprecated and "delete_one()" works fine.
+
 ### **Crud Functionality** 
-The four functions that are considered necessary to implement a persistent storage application: create, read, update and delete. All functions works correctly.
+- The four functions that are considered necessary to implement a persistent storage application: create, read, update and delete. All functions works correctly.
 
 ### **Browsers Compatibility**  
-The website was tested using the following browsers: Google Chrome,, Opera, Mozilla Firefox, and Safari.  
+- The website was tested using the following browsers: Google Chrome,, Opera, Mozilla Firefox, and Safari.  
 
 ### **Devices**
 The website was also viewed on the following devices: 
@@ -119,7 +126,7 @@ The website was also viewed on the following devices:
 - Family members review the site on their devices and did any experience issues.  
 
  ### **Responsiveness**
-To check the responsiveness of the website across all devices, the developer tools was used regularly during the developing process. 
+- To check the responsiveness of the website across all devices, the developer tools was used regularly during the developing process. 
 
 ### **Links**  
 The links were tested to ensure that:  
