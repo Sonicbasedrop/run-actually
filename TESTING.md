@@ -164,7 +164,7 @@ The [W3C Markup Validator Sevice](https://validator.w3.org/) and [W3C CSS Valida
  <br>
  
 ### **CSS**
-!|[CSS](readme_images/testing_images/w3c_validator/css/css_w3c_vali.png)
+!|[CSS](readme_images/testing_images/w3c_validator/css/css_validation.png)
 <br>
 ## **5. JavaScript Testing**  
 The javascript code through [JSHint](https://jshint.com/), and there were some warnings, but no errors.
