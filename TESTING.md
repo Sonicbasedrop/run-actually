@@ -1,7 +1,8 @@
 ![RUN||actually logo](readme_images/testing_images/color_palette_moc_logo/runsmlogo.png)
 # RUN||actually - Testing
 
-Back to my main README.md click [here](README.md)<br>
+Back to my main README.md click [here](README.md)
+<br>
 The live site can be found [here](https://run-actually.herokuapp.com/)
 <br>
 
