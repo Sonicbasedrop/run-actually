@@ -1,9 +1,9 @@
-![RUN||actually logo](readme_images/runsmlogo.png)
+![RUN||actually logo](readme_images/testing_images/color_palette_moc_logo/runsmlogo.png)
 # RUN||actually 
 
 Run actually is a runners event finder site and our main objective is to get people off the sofa and enjoying being outdoors.We just love to run and we hope you will too after experiencing life on the trails.The live site can be found [here](https://run-actually.herokuapp.com/)
 
-![Mockup](readme_images/techsini-mockup.png)
+![Mockup](readme_images/testing_images/color_palette_moc_logo/techsini-mockup.png)
 
 ## Table of Content
 * [User Experience Design (UX)](#User-Experience-Design)
@@ -83,7 +83,7 @@ that I can easily return to the website if I navigate to a page that doesn't exi
 * Admin ability to add, edit, delete categories.
 * Admin ability to delete user account.
 
-![Importance and Difficulty](readme_images/dificulty-importance.png)
+![Importance and Difficulty](readme_images/testing_images/color_palette_moc_logo/dificulty-importance.png)
 ### **The Structure Plane**
 User Story:
 > As a user, I want the main purpose of the site to be clear so that I immediately know what the site is 
@@ -311,9 +311,9 @@ users. In production these are stored in Heroku.
 ### Design
 
 #### Planned Colour Scheme
-The main background colours are a grey-blue color #78909c ![](readme_images/blue-grey.png) all buttons and h3 headings  are green #136259 ![](readme_images/green.png)
+The main background colours are a grey-blue color #78909c ![Blue Grey](readme_images/testing_images/color_palette_moc_logo/blue-grey.png) all buttons and h3 headings  are green #136259 ![Green](readme_images/testing_images/color_palette_moc_logo/green.png)
  
-The main website text is black #000 ![](readme_images/black.png)
+The main website text is black #000 ![Black](readme_images/testing_images/color_palette_moc_logo/black.png)
 #### Typography
 The title page font used for the webpage is 'Permanent Marker' and the plain text for the rest of the site is the font 'Montserrat'. 
 
@@ -418,7 +418,27 @@ Some features in the profile page have postponed to the next itteration of the w
 * [Favicon](https://favicon.io/)
     * Favicon.io was used to make the site favicon 
 * [Techsini](http://techsini.com/multi-mockup/index.php)
-    * Multi Device Website Mockup Generator was used to create the Mock up image in this README 
+    * Multi Device Website Mockup Generator was used to create the Mock up image in this README
+
+## Testing
+
+### Test Strategy
+#### **Summary**
+Testing is required on all features and user stories documented in this README. 
+All clickable links must redirect to the correct pages. All forms linked to MongoDB
+must be tested to ensure they insert all given fields into the correct collections.
+
+
+#### **Access Requirements**
+Tester must have access to MongoDB in order to manually verify the insertion 
+of records to users and events collections.
+
+#### **Assumptions and Dependencies**
+Testing is dependent on the website being deployed live on Heroku.
+
+### Test Results
+
+Full test results can be found [here](https://github.com/Sonicbasedrop/run-actually/blob/main/TESTING.md)
 
 
 
