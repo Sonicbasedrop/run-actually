@@ -10,7 +10,8 @@ The live site can be found [here](https://run-actually.herokuapp.com/)
    - [Unregistered Users' Goals](Unregistered-Users-Goals)   
    - [Registered Users' Goals](Registered-Users-Goals)  
    - [Site Owners Goals](Site-Owners-Goals)    
-2. [Manual Testing](Manual-Testing)   
+2. [Manual Testing](Manual-Testing) 
+   - [Crud Functinality](Crud-Functionality)  
    - [Browser Compatibility](Browser-Compatibility)   
    - [Devices](Devices)   
    - [Responsiveness](Responsiveness)   
@@ -101,7 +102,11 @@ contains all the details of upcoming events.
    ![Manage-Categories](readme_images/testing_images/user_stories_images/categories_page.png)
   <br>
 
-  ## **3. Manual Testing by the developer**  
+  ## **3. Manual Testing by the developer** 
+
+### **Crud Functionality** 
+The four functions that are considered necessary to implement a persistent storage application: create, read, update and delete. All functions works correctly.
+
 ### **Browsers Compatibility**  
 The website was tested using the following browsers: Google Chrome,, Opera, Mozilla Firefox, and Safari.  
 
