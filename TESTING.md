@@ -48,7 +48,7 @@ As a new/ unregistered user, I want to:
 4. * As a user, I want a way to contact the site owner so i case have any questions regarding
 the website or upcoming races and receive feedback to alert on form submission.
    <br>
-  ![Contact site owner](readme_images/testing_images/user_stories_images/conatact_page.png)
+  ![Contact site owner](readme_images/testing_images/user_stories_images/contact_page.png)
 
 5. Navigate intuitively and can see the Sign-Up button right away  
    * For unregistered users, the links on Navbar that are available to navigate are: Home, Events,Sign Up, and Log In. The footer is also avalible to a unregistered users, the links in footer that is avalible to all users are: About and Contact. 
