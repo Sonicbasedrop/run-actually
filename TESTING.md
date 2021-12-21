@@ -85,7 +85,7 @@ As Site owner/Admin user, I want to:
 1. Be able to create,edit and delete events.
    * All functions as a general user are available for the admin.
    <br>
-   ![Delete events](readme_images/testing_images/user_stories_images/delete_event.png)
+   ![Delete an event](readme_images/testing_images/user_stories_images/delete_event.png)
    <br>
     * To increase the number of participants in runners events by providing a simple, easy to use website that
 contains all the details of upcoming events.
